@@ -165,6 +165,7 @@
 
 
 /* ********MI ESTILOS***** */
+
 .bg-color-opacity {
     background-color: rgba(189, 177, 177, 0.404);
 }
@@ -242,13 +243,10 @@
     border-top-right-radius: .375rem;
     border-bottom-right-radius: .375rem;
 }
-.carousel {
-    height: 75vh;
-    overflow: hidden;
-}
+
 .carousel-item img {
 
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
@@ -449,6 +447,10 @@ footer i {
     .roundedindex {
         border-top-right-radius: 0 !important;
         border-bottom-right-radius: 0 !important;
+    }
+    .carousel {
+        height: 75vh;
+        overflow: hidden;
     }
 
 }
