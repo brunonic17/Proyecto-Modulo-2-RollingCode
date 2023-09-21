@@ -16,6 +16,7 @@
 
 }
 
+
 * {
     font-family: var(--font-family);
 
@@ -24,6 +25,7 @@
     background-color:rgb(236, 240, 241);
 }
 
+.carru {object-fit: scale-down;}
 
 .container-bg-img {
     background-image: url(./img/353065597_710813511054060_9158423684060028871_n.jpg);
