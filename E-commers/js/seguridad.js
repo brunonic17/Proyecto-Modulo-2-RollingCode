@@ -35,7 +35,7 @@ Contrase_Confir.addEventListener("change", e => {
     Confirmar = e.target.value
 }, false);
 
-
+//#region Registrar
 Registar.addEventListener("click", (e) => {
   e.preventDefault();
   e.stopPropagation();
@@ -74,3 +74,5 @@ Registar.addEventListener("click", (e) => {
     alert("Contraseñas No Coinciden");
   }
 });
+//#endregion Registrar
+
