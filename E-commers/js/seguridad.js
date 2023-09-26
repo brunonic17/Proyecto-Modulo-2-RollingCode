@@ -1,60 +1,65 @@
 
 const Nomb= document.getElementById("inputNombre");
-const Email= document.getElementById("inputEmail");
-const Contrase_Mail= document.getElementById("inputContrasena");
+const Mail= document.getElementById("inputEmail");
+const Contrase_Mail= document.getElementById("inputContrase");
 const Contrase_Confir= document.getElementById("inputConfirContrase");
 const Registar = document.getElementById("UsuarioGuardar");
 
-var registroUsuario = new Object();
+class Usuario {
+    Id_Usu = "";
+    Nombre = "";
+    Email = "";
+    Contrase = "";
+  }
 
-let nombre = "";
-let email = "";
-let contrasena = "";
-let confirmar = "";
+let registroUsuario = new Usuario();
+
+let Id_Usu = 1;
+let Nombre = "";
+let Email = "";
+let Contrase = "";
+let Confirmar = "";
+let TipoUsuario="user";
 
 
 Nomb.addEventListener("change", e => {
-    nombre = e.target.value
+    Nombre = e.target.value
 }, false);
-Email.addEventListener("change", e => {
-    email = e.target.value
-}, false);
-Contrase_Confir.addEventListener("change", e => {
-    confirmar = e.target.value
+Mail.addEventListener("change", e => {
+    Email = e.target.value
 }, false);
 Contrase_Mail.addEventListener("change", e => {
-    contrasena = e.target.value
+    Contrase = e.target.value
 }, false);
-let idUsuario =""
-
-function comparar(key){
-    let comparid=localStorage.getItem(key)
-    if(email=comparid){
-        let mensaje="capo ya tenes una cuneta"
-        alert(mensaje)
-    }
-    else{localStorage.setItem(key, JSON.stringify(registroUsuario))}
-}
+Contrase_Confir.addEventListener("change", e => {
+    Confirmar = e.target.value
+}, false);
 
 
 Registar.addEventListener("click", e => {
     e.preventDefault();
     e.stopPropagation();
     
-    registroUsuario.nombre = nombre;
-    registroUsuario.email = email;
-    registroUsuario.contrasena = contrasena;
-    idUsuario=email
-
-    comparar(idUsuario)
-    // let idslocal = localStorage.getItem(registroUsuario.key)
-    // JSON.parse(idslocal)
-    // console.log(idslocal)
+    registroUsuario.Nombre = Nombre;
+    registroUsuario.Email = Email;
+    registroUsuario.Contrase = Contrase;
+    registroUsuario.TipoUsuario = TipoUsuario;
     
+    if (Contrase === Confirmar) {   
+        
+        let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
+        
+        if (usuariosLocalStorage === null) {
+          registroUsuario.Id_Usu = Id_Usu;
+          localStorage.setItem("usuarios", JSON.stringify([registroUsuario]));
+        } else {
+          Id_Usu = usuariosLocalStorage.length +1;
+          registroUsuario.Id_Usu = Id_Usu;
+          usuariosLocalStorage.push(registroUsuario);
+          localStorage.setItem("usuarios", JSON.stringify(usuariosLocalStorage));
+        }
+      } else {
+        alert("Contraseñas No Coinciden")
+    }
+})
     
-}
-
-//   let idlocal=localStorage.getItem(registroUsuario)
-
-
-)
