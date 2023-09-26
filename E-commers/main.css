@@ -665,6 +665,9 @@ footer i {
 .imglogin   {
     height: 100vh;
 }
+
+.formlogin:focus{color:white !important;
+background-color: black !important;}
   /*---------------- Pagina Registro------------- */
 
   :root {

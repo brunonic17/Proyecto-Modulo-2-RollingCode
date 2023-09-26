@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Registro Usuario- Yo Campo</title>
 
-    <script src="/E-commers/js/login.js"></script>
+    
     
     
     <!-- ***********Bootstrap********** -->
@@ -58,7 +58,7 @@
           <li class="nav-item fs-4">
             <a class=" aindex nav-link active fw-bold text-white" aria-current="page" href="../index.html" data-bs-toggle="tooltip"
               data-bs-title="Inicio" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"><i
-                class="bi bi-house-door"></i></a>
+          class="bi bi-house-door"></i></a>
           </li>
           <li class="nav-item fs-4">
             <a class="aindex nav-link text-white fw-bold" aria-current="page" href="./login.html" data-bs-toggle="tooltip"
@@ -210,14 +210,14 @@
           <form class="mb-5">
             <div class="mb-4">
               <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email"  class="form-control bg-dark-x border-0" placeholder="Ingresa tu Email"
+              <input type="email"  class="form-control formlogin text-light bg-dark-x border-0" placeholder="Ingresa tu Email"
                 id="exampleInputEmail1" aria-describedby="emailHelp"/>
             </div>
             <div class="mb-4">
               <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-              <input type="password"  class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa una Contraseña"
+              <input type="password"  class="form-control formlogin text-light bg-dark-x border-0 mb-2" placeholder="Ingresa una Contraseña"
                 id="exampleInputPassword1"/>
-              <a href="#" id="emailHelp" class="">¿Has olvidado la Contraseña?</a>
+              <a href="/E-commers/pages/registro-usuario.html" id="emailHelp" class="">¿No tienes una cuenta? Presiona aqui para registrarte</a>
             </div>
             <button type="submit" id="btnlogin" class="btn btn-primary btn-lg mb-0">Iniciar Sesión</button>
           </form>
@@ -334,4 +334,5 @@
  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 </script>
+<script src="/E-commers/js/login.js"></script>
   </body>

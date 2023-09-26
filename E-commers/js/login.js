@@ -4,6 +4,7 @@ const contraseñahtml=document.getElementById("exampleInputPassword1")
 const button_logingtml=document.getElementById("btnlogin")
  
 var login= new Object()
+
 let usuario=""
 let contraseña=""
 var Usuario="Usuario"
@@ -13,15 +14,16 @@ usuariohtml.addEventListener("change",function cargausuario(e){ usuario=e.target
 contraseñahtml.addEventListener("change",function cargacontraseña (e ){ contraseña=e.target.value
 },false
  )
-button_logingtml.addEventListener ("click" , cargardatos(e),false)
-
-function cargardatos(e){
-    e.preventDefault();
-  e.stopPropagation();
-  login.usuario.push(usuario)
-  login.contraseña.push(contraseña)
-  localStorage.setItem(Usuario,JSON.stringify(login))
+button_logingtml.addEventListener ("click" ,function cargardatos(e){
+  e.preventDefault();
+e.stopPropagation();
+login.usuario=usuario
+login.contraseña=contraseña
+// localStorage.setItem(Usuario,JSON.stringify(login))
+sessionStorage.setItem(Usuario,JSON.stringify(login))
 }
+,false)
+
 
 // class Login{
 //     constructor(Usuario,Contraseña){
