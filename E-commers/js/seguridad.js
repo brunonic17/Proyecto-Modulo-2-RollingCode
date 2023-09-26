@@ -36,30 +36,41 @@ Contrase_Confir.addEventListener("change", e => {
 }, false);
 
 
-Registar.addEventListener("click", e => {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    registroUsuario.Nombre = Nombre;
-    registroUsuario.Email = Email;
-    registroUsuario.Contrase = Contrase;
-    registroUsuario.TipoUsuario = TipoUsuario;
-    
-    if (Contrase === Confirmar) {   
-        
-        let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
-        
-        if (usuariosLocalStorage === null) {
-          registroUsuario.Id_Usu = Id_Usu;
-          localStorage.setItem("usuarios", JSON.stringify([registroUsuario]));
-        } else {
-          Id_Usu = usuariosLocalStorage.length +1;
-          registroUsuario.Id_Usu = Id_Usu;
-          usuariosLocalStorage.push(registroUsuario);
-          localStorage.setItem("usuarios", JSON.stringify(usuariosLocalStorage));
-        }
+Registar.addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  registroUsuario.Nombre = Nombre;
+  registroUsuario.Email = Email;
+  registroUsuario.Contrase = Contrase;
+  registroUsuario.TipoUsuario = TipoUsuario;
+
+  if (Contrase === Confirmar) {
+    let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
+    //usuariosLocalStorage = Array Objetos
+    //Usuario = Cada Objeto dentro del Array 
+    //usuarios = Clave del Local Storage
+
+    let conf_email = usuariosLocalStorage.find(
+      (Usuario) => Usuario.Email === registroUsuario.Email
+    );
+    if (conf_email === undefined) {
+      if (usuariosLocalStorage === null) {
+        registroUsuario.Id_Usu = Id_Usu;
+        localStorage.setItem("usuarios", JSON.stringify([registroUsuario]));
       } else {
-        alert("Contraseñas No Coinciden")
+        let ult = usuariosLocalStorage[usuariosLocalStorage.length - 1];
+        Id_Usu = ult.Id_Usu + 1;
+
+        //Id_Usu = usuariosLocalStorage.length +1;
+        registroUsuario.Id_Usu = Id_Usu;
+        usuariosLocalStorage.push(registroUsuario);
+        localStorage.setItem("usuarios", JSON.stringify(usuariosLocalStorage));
+      }
+    } else {
+      alert("Mail Ya Registrado");
     }
-})
-    
+  } else {
+    alert("Contraseñas No Coinciden");
+  }
+});
