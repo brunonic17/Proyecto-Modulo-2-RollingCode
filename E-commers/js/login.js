@@ -49,6 +49,7 @@ Login.addEventListener("click", (e) => {
     } else {
       if(registroUsuario.Contrase === conf_email.Contrase) {
         alert("Puede entrar")
+        console.log(conf_email)
 
       } else {
         alert("Usuario o Contraseña Incorrecta 2");
