@@ -136,11 +136,15 @@
     <!--endregion nav-->
 
     <section class="">
-        <div class="container-fluid"><h1 class="pt-3">Admin Product Panel</h1></div>
-        
-        <div class="d-flex justify-content-center"><h2 class="mb-3">Agregar Producto</h2></div>
+        <div class="container-fluid">
+            <h1 class="pt-3">Admin Product Panel</h1>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <h2 class="mb-3">Agregar Producto</h2>
+        </div>
         <div class="container">
-            
+
             <form class="m-3">
                 <div class="mb-3">
                     <label for="NombreArt" class="form-label">Nombre del Articulo</label>
@@ -176,8 +180,9 @@
                         <input type="number" class="form-control" id="Stock">
                     </div>
                 </div>
-                <div class="d-flex justify-content-center"><button type="submit" class="btn btn-primary bg-success">Agregar Producto</button>
-                </div>  
+                <div class="d-flex justify-content-center"><button type="submit"
+                        class="btn btn-primary bg-success">Agregar Producto</button>
+                </div>
             </form>
         </div>
         <div class="container-fluid">
@@ -288,6 +293,42 @@
             </table>
         </div>
         </div>
+        <div class="container-fluid">
+            <h1 class="pt-3">Ejemplo Tarjetitas</h1>
+        </div>
+        <div class="d-flex justify-content-center">
+            <h2 class="mb-3">Alpargatas</h2>
+        </div>
+        <div class="container">
+            <div class="card" style="width: 18rem;">
+                <img src="../img/alpa1.JPG" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="d-flex justify-content-lg-around">
+                        <div>
+                            <label for="Id_usu-card" style="font-weight: bold;">Id_usu:</label>
+                            <h6 id="Id_usu-card">1</h6>
+                            <label for="Precio-card" style="font-weight: bold;">Precio</label>
+                            <h6 class="card-title" id="Precio-card">2800</h6>
+                            <label for="Stock-card" style="font-weight: bold;">Stock:</label>
+                            <h6 class="card-title" id="Stock-card">20</h6>
+                        </div>
+                        <div>
+                            <label for="Categoria-card" style="font-weight: bold;">Categoria:</label>
+                            <h6 id="Categoria-card">Alpargatas</h6>
+                            <label for="title-card" style="font-weight: bold;">NombreArt:</label>
+                            <h6 class="card-title" id="title-card">alpargata-lisa</h6>
+                        </div>
+                    </div>
+                    <label for="description-card" style="font-weight: bold;">Descripcion:</label>
+                    <p class="card-text" id="description-card">Some quick example text to build on the card title and
+                        make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-success">Editar</a>
+                    <a href="#" class="btn btn-danger">Eliminar</a>
+                </div>
+            </div>
+        </div>
+
     </section>
 
 
