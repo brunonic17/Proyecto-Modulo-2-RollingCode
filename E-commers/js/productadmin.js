@@ -1,90 +1,121 @@
+const Rub = document.getElementById("Rubro");
 const Nomb = document.getElementById("NombreArt");
-const Mail = document.getElementById("inputEmail");
-const Contrase_Mail = document.getElementById("inputContrase");
-const Contrase_Confir = document.getElementById("inputConfirContrase");
-const Registar = document.getElementById("UsuarioGuardar");
+const Tal = document.getElementById("Talle");
+const Desc = document.getElementById("Descripcion");
+const Pcio = document.getElementById("Precio");
+const St = document.getElementById("Stock");
+const Img = document.getElementById("Urlimg");
+const Registar = document.getElementById("AgregaProd");
 
-class Usuario {
-  Id_Usu = "";
-  Nombre = "";
-  Email = "";
-  Contrase = "";
+class Producto {
+  Id_Prod = "";
+  RubroArt="";
+  NombreArt = "";
+  Talle = "";
+  Descripcion = "";
+  Precio = "";
+  Stock = "";
+  Urlimg ="";
 
 }
 
-let registroUsuario = new Usuario();
+let registroProducto = new Producto();
 
-let Id_Usu = 1;
-let Nombre = "";
-let Email = "";
-let Contrase = "";
-let Confirmar = "";
-let TipoUsuario = "user";
+  let Id_Prod = "1";
+  let RubroArt="";
+  let NombreArt = "";
+  let Talle = "";
+  let Descripcion = "";
+  let Precio = "";
+  let Stock = "";
+  let Urlimg ="";
 
+Rub.addEventListener(
+  "change",
+  (e) => {
+    RubroArt = e.target.value;
+  },
+  false
+);
 Nomb.addEventListener(
   "change",
   (e) => {
-    Nombre = e.target.value;
+    NombreArt = e.target.value;
   },
   false
 );
-Mail.addEventListener(
+Tal.addEventListener(
   "change",
   (e) => {
-    Email = e.target.value;
+    Talle = e.target.value;
   },
   false
 );
-Contrase_Mail.addEventListener(
+Desc.addEventListener(
   "change",
   (e) => {
-    Contrase = e.target.value;
+    Descripcion = e.target.value;
   },
   false
 );
-Contrase_Confir.addEventListener(
+Pcio.addEventListener(
   "change",
   (e) => {
-    Confirmar = e.target.value;
+    Precio = e.target.value;
   },
   false
 );
+St.addEventListener(
+  "change",
+  (e) => {
+    Stock = e.target.value;
+  },
+  false
+);
+Img.addEventListener(
+  "change",
+  (e) => {
+    Urlimg = e.target.value;
+  },
+  false
+);
+
 //#region Registrar
 Registar.addEventListener("click", (e) => {
   e.preventDefault();
   e.stopPropagation();
 
-  registroUsuario.Nombre = Nombre;
-  registroUsuario.Email = Email;
-  registroUsuario.Contrase = Contrase;
-  registroUsuario.TipoUsuario = TipoUsuario;
+  registroProducto.RubroArt = RubroArt;
+  registroProducto.NombreArt = NombreArt;
+  registroProducto.Talle = Talle;
+  registroProducto.Descripcion = Descripcion;
+  registroProducto.Precio = Precio;
+  registroProducto.Stock = Stock;
+  registroProducto.Urlimg = Urlimg;
 
-  if (Contrase === Confirmar) {
-    let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
+  
+    let productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
     //usuariosLocalStorage = Array Objetos
     //Usuario = Cada Objeto dentro del Array
     //usuarios = Clave del Local Storage
 
-    if (usuariosLocalStorage === null) {
-      registroUsuario.Id_Usu = Id_Usu;
-      localStorage.setItem("usuarios", JSON.stringify([registroUsuario]));
+    if (productosLocalStorage === null) {
+      registroProducto.Id_Prod = Id_Prod;
+      localStorage.setItem("productos", JSON.stringify([registroProducto]));
     } else {
-      let conf_email = usuariosLocalStorage.find(
-        (Usuario) => Usuario.Email === registroUsuario.Email
+      let conf_product = productosLocalStorage.find(
+        (Producto) => Producto.NombreArt === registroProducto.NombreArt
       );
 
-      if (conf_email === undefined) {
-        let ult = usuariosLocalStorage[usuariosLocalStorage.length - 1];
-        Id_Usu = ult.Id_Usu + 1;
-        registroUsuario.Id_Usu = Id_Usu;
-        usuariosLocalStorage.push(registroUsuario);
-        localStorage.setItem("usuarios", JSON.stringify(usuariosLocalStorage));
+      if (conf_product === undefined) {
+        let ult = productosLocalStorage[productosLocalStorage.length - 1];
+        Id_Prod = ult.Id_Prod + 1;
+        registroProducto.Id_Prod = Id_Prod;
+        productosLocalStorage.push(registroProducto);
+        localStorage.setItem("productos", JSON.stringify(productosLocalStorage));
       } else {
-        alert("Mail Ya Registrado");
+        alert("PRODUCTO Ya Registrado");
       }
     }
-  } else {
-    alert("Contraseñas No Coinciden");
-  }
-});
+  });
 //#endregion Registrar
