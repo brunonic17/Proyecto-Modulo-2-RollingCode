@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Login - Yo Campo</title>
+  <title>Base de Datos de Articulos </title>
 
 
   <!-- ***********Bootstrap********** -->
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 </head>
 
-<body class="bodylogin bg-dark-login">
+<body class="rubros">
   <!--#region nav-->
   <nav class=" bg-dark d-flex justify-content-center sticky-top container-nav">
     <div
@@ -52,31 +52,16 @@
           </li>
           <li class="nav-item fs-4">
             <a class="aindex nav-link text-white fw-bold" aria-current="page" href="./login.html" data-bs-toggle="tooltip"
-              data-bs-title="Acceder" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
+              data-bs-title="Cerrar Sesión" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
               href="#"><i class="bi bi-person-circle"></i></a>
           </li>
           <li class="nav-item fs-4">
             <a class="aindex nav-link text-white fw-bold" aria-current="page" href="./contacto.html" data-bs-toggle="tooltip"
-              data-bs-title="Contacto" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
-              href="#"><i class="bi bi-telephone"></i></a>
-          </li>
-          <li class="nav-item fs-4 nav-item-nosotros">
-            <a class="aindex nav-link text-white fw-bold" aria-current="page" href="./accercadenosostros.html" data-bs-toggle="tooltip"
-              data-bs-title="Nosotros" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
-              href="#"><i class="bi bi-people-fill"></i></a>
+              data-bs-title="Administrador" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
+              href="#"><i class="bi bi-person-circle"></i></a>
           </li>
 
-          <li class="nav-item fs-4" >
-            <a class="aindex nav-link text-warning fw-bold" href="./Carrito.html" aria-current="page" data-bs-toggle="tooltip"
-              data-bs-title="Ver carrito" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"><i
-                class="bi bi-cart2">
-                <span class="position-absolute top-25 start-90 translate-middle badge rounded-pill bg-danger">
-                  1
-               
-                </span>
-              </i></a>
-
-          </li>
+          
         </ul>
       
       </div>
@@ -126,108 +111,33 @@
 
 
   <section>
-    <div class="row g-0">
-
-      <div class="col-lg-7 d-none d-lg-block">
-        <!-- #Region Carrucel-->
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="1500">
-              <img
-                src="https://scontent.ftuc4-1.fna.fbcdn.net/v/t1.6435-9/130989551_224790159258652_5411298827910078820_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a26aad&_nc_eui2=AeGS9iXjHhrJa_c5JC3yZ1quOVnz5VUxkus5WfPlVTGS62lQdpNQAM58uSXqEeOA-iM&_nc_ohc=5yjuu2Rla98AX_la13c&_nc_ht=scontent.ftuc4-1.fna&oh=00_AfCR_l1rhEHzyywjpAbPPOsdWmfw-1j6OiGts1KARjlL2Q&oe=64E519B7"
-                class="d-block w-100 img-fluid imglogin" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>El mejor estilo de Ropa de Campo</h5>
-              
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="1500">
-              <img
-                src="https://scontent.ftuc4-1.fna.fbcdn.net/v/t39.30808-6/289273534_611800020557662_990928564884582376_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a26aad&_nc_eui2=AeHGMgitUABYG0SA8ZVbpmqvzis3CobzBfXOKzcKhvMF9YDk8G-BPwgIS-iR6bXJ24A&_nc_ohc=jVtC_W6TDLEAX8PW8yN&_nc_ht=scontent.ftuc4-1.fna&oh=00_AfDB8poHcZ5w3YoKt4mlL9c7eEiDpIs5MnjSzDt4IZm-_A&oe=64C2DBBA"
-                class="d-block w-100 img-fluid imglogin" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>El mejor estilo de Ropa de Campo</h5>
-               
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="1500">
-              <img
-                src="https://scontent.faep14-2.fna.fbcdn.net/v/t1.6435-9/116019163_156452586092410_6761876687379582496_n.jpg?stp=dst-jpg_p600x600&_nc_cat=107&cb=99be929b-59f725be&ccb=1-7&_nc_sid=a26aad&_nc_ohc=iB3sFtRsGqAAX9iP-qa&_nc_ht=scontent.faep14-2.fna&oh=00_AfBGOK26H8CPQgN7rZk1wZ-Fp7jlY_j0MNYf1FFpsK41jw&oe=64D8DA9E"
-                class="d-block w-100 img-fluid imglogin" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>El mejor estilo de Ropa de Campo</h5>
-                
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="1500">
-              <img
-                src="https://scontent.ftuc4-1.fna.fbcdn.net/v/t39.30808-6/279275474_573935807677417_2637477841555945364_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_eui2=AeGGqwMxsO0KhEh0QDipwIN8yYxiTqYq0J_JjGJOpirQn_4vXEOfcFnFQNW4eaIiNzE&_nc_ohc=EIlAmbQmE2gAX_No009&_nc_ht=scontent.ftuc4-1.fna&oh=00_AfAUMKBHWXvbSGWHAYZ6dOYvFF_5yvapj_FJoD1YiXuN3w&oe=64C2CD53"
-                class="d-block w-100 img-fluid imglogin" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>El mejor estilo de Ropa de Campo</h5>
-                
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-        <!-- #Fin Carrusel-->
-      </div>
-
-      <div class="col-lg-5 d-flex flex-column align-items-end min-vh-100">
-        <!-- #region Login-->
-        <div class="d-flex align-items-end g-0 w-100 align-self-center">
-          <!--div class="col-lg-4 px-lg-3 pt-lg-3 pb-lg-2 p-1"-->
-          <img src="/E-commers/img/Logo Yo Campo.jpg" class="flex-grow-1  p-2">
-          <!--/div>
-            <div class= "col-lg-8 px-lg-8 pt-lg-9 pb-lg-6 p-1"-->
-          <h2 class="font-weight-bold flex-grow-1 align-content-lg-around mb-4">Bienvenido de Vuelta</h2>
-          <!--/div-->
-        </div>
-
-        <div class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
-
-          <form class="mb-5">
-            <div class="mb-4">
-              <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" class="form-control bg-dark-x border-0" placeholder="Ingresa tu Email" id="inputEmail"
-                id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-4">
-              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa una Contraseña" id="inputContrase"
-                id="exampleInputPassword1">
-              <a href="#" id="emailHelp" class="">¿Has olvidado la Contraseña?</a>
-            </div>
-            <button type="submit"  id="UsuarioLogin" class="btn btn-primary btn-lg mb-0">Iniciar Sesión</button>
-          </form>
-
-          <p class="text-muted mb-0">o inicia Sesión con:</p>
-          <div class="d-flex justify-content-around">
-            <button type="submit" class="btn btn-outline-light flex-grow-1 m-2"><i class="bi bi-google lead m-2"></i><a href="./error404.html">Google</a></button>
-            <button type="submit" class="btn btn-outline-light flex-grow-1 m-2"><i class="bi bi-facebook lead m-2"></i><a href="./error404.html">facebook</a></button>
-          </div>
-        </div>
-        <!-- #Fin Login-->
-        <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 ">
-          <p class="d-inline-block mb-0">¿Todavia no tienes una Cuenta</p> <a href="./registro-usuario.html" class="">Crea una ahora</a>
+    <h1 class="pt-3 text-center">Base de Datos Articulos</h1>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Selecciona un Rubro</option>
+          <option value="42">Bombachas</option>
+          <option value="44">Alpargatas</option>
+          <option value="46">Boinas</option>
+          <option value="48">Varios</option>
+        </select>
+    <div class="container-fluid row justify-content-evenly pt-5 pb-5">
+      <div class="card" style="width: 18rem;">
+        <img src="/E-commers/img/bombachas 1.jpg" class="card-img-top imgcard" alt="...">
+        <div class="card-body">
+          
+          <h5 class="card-title">Bombachas Lisas</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="./bombacha lisa.html" class="btn btn-primary">Ver Producto</a>
         </div>
       </div>
-
     </div>
-
   </section>
 
-   <!--#region footer-->
+
+
+
+
+  <!--#region footer-->
 <Footer class="bg-dark text-white container-fluid p-2">
   <section class="container    text-start text-md-start text-lg-start text-xl-center text-xxl-center">
     <div class="row text-start text-md-start">
@@ -315,6 +225,8 @@
 
 
 
+
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
     crossorigin="anonymous"></script>
@@ -326,5 +238,5 @@
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
   </script>
-  <script src="/E-commers/js/login.js"></script>
-</body>
+
+</html>
