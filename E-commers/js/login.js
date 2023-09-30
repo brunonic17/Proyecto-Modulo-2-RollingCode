@@ -47,9 +47,17 @@ Login.addEventListener("click", (e) => {
   if (conf_email === undefined) {
       alert("Usuario o Contraseña Incorrecta 1");
     } else {
-      if(registroUsuario.Contrase === conf_email.Contrase) {
-        alert("Puede entrar")
-        console.log(conf_email)
+      if(registroUsuario.Contrase === conf_email.Contrase)  {
+        if (conf_email.TipoUsuario == "user") {
+          alert("Puede entrar como User, habilita Solo el CARRITO");
+          console.log("Usuario: ",conf_email.Nombre," Tipo: ",conf_email.TipoUsuario);
+        } else  {
+            if (conf_email.TipoUsuario == "admin") {
+              alert("Puede entrar como Administrador, habilita El Modulo para Administrar");
+              console.log("Usuario: ",conf_email.Nombre," Tipo: ",conf_email.TipoUsuario);
+            }
+        }
+        
 
       } else {
         alert("Usuario o Contraseña Incorrecta 2");
