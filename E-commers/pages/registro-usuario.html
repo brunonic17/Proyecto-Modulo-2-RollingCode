@@ -138,8 +138,8 @@
       <div class="row g-0">
 
         <div class="col-lg-7 d-none d-lg-block">
-        <!-- #Region Carrucel-->
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <!-- #region Carrucel-->
+        <!-- <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="1500">
               <img
@@ -188,8 +188,8 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-        </div>
-        <!-- #Fin Carrusel-->
+        </div> -->
+        <!-- #endregion Carrusel-->
         </div>
 
         <div class="col-lg-5 d-flex flex-column align-items-end min-vh-100">
@@ -205,40 +205,40 @@
           
           <div class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
             
-            <form class="mb-5" action="./error404.html">
+            <form class="mb-5" action="#">
               <div class="mb-4 row  justify-content-center">
                 <div class="col-md-6 col-6 col-xl-6">
                     <label for="inputEmail4" class="form-label">Nombress</label>
-                    <input type="text"  class="form-control labelregistro border-0" id="inputEmail4">
+                    <input type="text"  class="form-control labelregistro border-0" id="input_nomb">
                   </div>
-                  <div class="col-md-6 col-6 col-xl-6">
+                  <!-- <div class="col-md-6 col-6 col-xl-6">
                     <label for="inputEmail4" class="form-label">Apellido</label>
-                    <input type="text" class="form-control labelregistro border-0" id="inputEmail4">
-                  </div>
+                    <input type="text" class="form-control labelregistro border-0" id="input_email">
+                  </div> -->
               </div>
              
               <div class="mb-4 row  justify-content-center">
                 <div class="col-md-6 col-6 col-xl-6">
                     <label for="inputEmail4" class="form-label">Email</label>
-                    <input type="text"  class="form-control labelregistro border-0" id="inputEmail4">
+                    <input type="text"  class="form-control labelregistro border-0" id="input_email">
                   </div>
-                  <div class="col-md-6 col-6 col-xl-6">
+                  <!-- <div class="col-md-6 col-6 col-xl-6">
                     <label for="inputEmail4" class="form-label">Nombre de Usuario</label>
                     <input type="text" class="form-control labelregistro border-0" id="inputEmail4">
-                  </div>
+                  </div> -->
               </div>
 
               <div class="mb-4 row  justify-content-center">
                 <div class="col-md-6 col-6 col-xl-6">
                     <label for="inputEmail4" class="form-label">Contraseña</label>
-                    <input type="text"  class="form-control labelregistro border-0" id="inputEmail4">
+                    <input type="text"  class="form-control labelregistro border-0" id="input_password">
                   </div>
                   <div class="col-md-6 col-6 col-xl-6">
                     <label for="inputEmail4" class="form-label">Confirmación  de Contraseña</label>
-                    <input type="text" class="form-control labelregistro border-0" id="inputEmail4">
+                    <input type="text" class="form-control labelregistro border-0" id="input_password2">
                   </div>
               </div>
-
+<!-- 
               <div class="mb-4 row  justify-content-center">
                 <div class="col-md-6 col-6 col-xl-6">
                     <label for="inputEmail4" class="form-label">Pais</label>
@@ -248,9 +248,9 @@
                     <label for="inputEmail4" class="form-label">Provincia</label>
                     <input type="text" class="form-control labelregistro border-0" id="inputEmail4">
                   </div>
-              </div>
+              </div> -->
 
-              <div class="mb-4 row  justify-content-center">
+              <!-- <div class="mb-4 row  justify-content-center">
                 <div class="col-md-6 col-6 col-xl-6">
                     <label for="inputEmail4" class="form-label">Ciudad</label>
                     <input type="text"  class="form-control labelregistro border-0" id="inputEmail4">
@@ -267,9 +267,9 @@
                     <input type="text"  class="form-control labelregistro border-0" id="inputEmail4">
                   </div>
                   
-              </div>
+              </div> -->
 
-              <div class="mb-4 row  justify-content-center">
+              <!-- <div class="mb-4 row  justify-content-center">
                 <div class="col-3 col-md-3 col-xl-3">
                     <label for="inputEmail4" class="form-label">Cod. Postal</label>
                     <input type="text"  class="form-control labelregistro border-0" id="inputEmail4">
@@ -286,9 +286,9 @@
                     <label for="inputEmail4" class="form-label">Dpto.</label>
                     <input type="text" class="form-control labelregistro border-0" id="inputEmail4">
                   </div>
-              </div>
+              </div> -->
 
-              <button type="submit" class="btnregistro btn btn-primary d-grid gap-2 col-6 mx-auto">Registrar</button>
+              <button type="submit" id="btn_regis" class="btnregistro btn btn-primary d-grid gap-2 col-6 mx-auto">Registrar</button>
             </form>
 
            
@@ -398,6 +398,6 @@
 <script>
  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
 </script>
+<script src="../assets/seguridad_login_admin.js" type="module"></script>
   </body>
