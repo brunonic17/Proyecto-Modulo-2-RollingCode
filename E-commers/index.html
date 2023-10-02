@@ -1,151 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-mode>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- ***********TITULO********** -->
-  <title>Yo Campo</title>
-  <!-- ***********FAVICOM********** -->
-  <link rel="shortcut icon" href="./img/img-logo.jpg" type="image/x-icon">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- ***********TITULO********** -->
+    <title>Yo Campo</title>
+    <!-- ***********FAVICOM********** -->
+    <link rel="shortcut icon" href="./img/img-logo.jpg" type="image/x-icon">
 
-  <!-- ***********Bootstrap********** -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <!-- ***********Bootstrap********** -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous" />
 
-  <!-- *******CSS********** -->
-  <link rel="stylesheet" href="./main.css">
+    <!-- *******CSS********** -->
+    <link rel="stylesheet" href="./main.css">
 
-  <!-- *******ICONOS******** -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  <!-- *******FUENTES******** -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-</head>
+    <!-- *******ICONOS******** -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- *******FUENTES******** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet">
+  </head>
 
-<body>
-  <!--#region nav-->
-  <nav class=" bg-dark d-flex justify-content-center sticky-top container-nav">
-    <div
-      class="row w-100 container container-sm container-md container-lg container-xl container-xxl align-items-center pe-1">
-      <!-- *******menu-hamburguesa****** -->
-      <div class="navbar navbar-expand-lg col-2 col-sm-1 col-md-1  order-md-0 menu-hamburguesa p-0">
-
-        <button class="navbar-toggler w-100 border-0" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-      </div>
-      <!-- *******img-logo****** -->
-
+  <body data-mode>
+    <!--#region nav-->
+    <nav class=" bg-dark d-flex justify-content-center sticky-top container-nav">
       <div
-        class="col-3 col-sm-5 col-md-1  col-lg-3 col-xl-3 col-xxl-2  order-md-1 d-flex justify-content-start p-1 img-logo">
+        class="row w-100 container container-sm container-md container-lg container-xl container-xxl align-items-center pe-1">
+        <!-- *******menu-hamburguesa****** -->
+        <div
+          class="navbar navbar-expand-lg  col-2 col-sm-1 col-md-1  order-md-0 menu-hamburguesa p-0">
 
-        <a class="text-white aindex" href="./index.html"><img class="img-shifu rounded-circle" src="./img/imglogo01.jpg" alt="logo"></a>
-      </div>
-      <!-- *******menu-iconos****** -->
+          <button class="navbar-toggler w-100 border-0" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-      <div class="col-7 col-sm-6  col-md-3 col-lg-3 col-xl-3 col-xxl-3 order-md-3 d-flex justify-content-end pe-md-4">
+        </div>
 
-        <ul class="navbar-nav gap-2 gap-sm-3 gap-md-3 gap-lg-3 gap-xl-4 gap-xxl-4 d-flex flex-row justify-content-end">
-          <li class="nav-item fs-4">
-            <a class=" aindex nav-link active fw-bold text-white" aria-current="page" href="./index.html" data-bs-toggle="tooltip"
-              data-bs-title="Inicio" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"><i
-                class="bi bi-house-door"></i></a>
-          </li>
-          <li class="nav-item fs-4">
-            <a class="aindex nav-link text-white fw-bold" aria-current="page" href="./pages/login.html" data-bs-toggle="tooltip"
-              data-bs-title="Acceder" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
-              href="#"><i class="bi bi-person-circle"></i></a>
-          </li>
-          <li class="nav-item fs-4">
-            <a class="aindex nav-link text-white fw-bold" aria-current="page" href="./pages/contacto.html" data-bs-toggle="tooltip"
-              data-bs-title="Contacto" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
-              href="#"><i class="bi bi-telephone"></i></a>
-          </li>
-          <li class="nav-item fs-4 nav-item-nosotros">
-            <a class="aindex nav-link text-white fw-bold" aria-current="page" href="./pages/accercadenosostros.html" data-bs-toggle="tooltip"
-              data-bs-title="Nosotros" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
-              href="#"><i class="bi bi-people-fill"></i></a>
-          </li>
+        <!-- *******img-logo****** -->
 
-          <li class="nav-item fs-4">
-            <a class="aindex nav-link text-warning fw-bold" href="./pages/Carrito.html" aria-current="page" data-bs-toggle="tooltip"
-              data-bs-title="Ver carrito" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"><i
-                class="bi bi-cart2">
-                <span class="position-absolute top-25 start-90 translate-middle badge rounded-pill bg-danger">
-                  1
-                 
-                </span>
-              </i></a>
+        <div
+          class="col-3 col-sm-5 col-md-1  col-lg-3 col-xl-3 col-xxl-2  order-md-1 d-flex justify-content-start p-1 img-logo">
 
-          </li>
+          <a class="text-white aindex" href="./index.html"><img
+              class="img-shifu rounded-circle" src="./img/imglogo01.jpg"
+              alt="logo"></a>
+        </div>
+
+        <!-- *******menu-iconos****** -->
+
+        <div
+          class="col-7 col-sm-6  col-md-3 col-lg-3 col-xl-3 col-xxl-3 order-md-3 d-flex justify-content-end pe-md-4">
+
+          <ul
+            class="navbar-nav gap-2 gap-sm-3 gap-md-3 gap-lg-3 gap-xl-4 gap-xxl-4 d-flex flex-row justify-content-end">
+            <li class="nav-item fs-4">
+              <a class=" aindex nav-link active fw-bold text-white"
+                aria-current="page" href="./index.html"
+                data-bs-toggle="tooltip" data-bs-title="Inicio"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic"><i
+                  class="bi bi-house-door"></i></a>
+            </li>
+            <li class="nav-item fs-4">
+              <a class="aindex nav-link text-white fw-bold" aria-current="page"
+                href="./pages/login.html"
+                data-bs-toggle="tooltip" data-bs-title="Acceder"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#"><i
+                  class="bi bi-person-circle"></i></a>
+            </li>
+            <li class="nav-item fs-4">
+              <a class="aindex nav-link text-white fw-bold" aria-current="page"
+                href="./pages/contacto.html"
+                data-bs-toggle="tooltip" data-bs-title="Contacto"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#"><i
+                  class="bi bi-telephone"></i></a>
+            </li>
+            <li class="nav-item fs-4 nav-item-nosotros">
+              <a class="aindex nav-link text-white fw-bold" aria-current="page"
+                href="./pages/accercadenosostros.html"
+                data-bs-toggle="tooltip" data-bs-title="Nosotros"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#"><i
+                  class="bi bi-people-fill"></i></a>
+            </li>
+
+            <li class="nav-item fs-4">
+              <a class="aindex nav-link text-warning fw-bold"
+                href="./pages/Carrito.html" aria-current="page"
+                data-bs-toggle="tooltip" data-bs-title="Ver carrito"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic"><i
+                  class="bi bi-cart2">
+                  <span
+                    class="position-absolute top-25 start-90 translate-middle badge rounded-pill bg-danger">
+                    1
+
+                  </span>
+                </i></a>
+
+            </li>
+            <button class=" fs-4 theme_dark"> <span>🌙</span></a>
+
+          </button>
         </ul>
-       
+
       </div>
 
+      <!-- *********collapse******** -->
 
-      <!--#menu-collapse-->
-      <div class="collapse navbar-collapse order-md-4 x" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse  order-md-4 x"
+        id="navbarSupportedContent">
         <ul class="navbar-nav mb-md-0 text-white">
 
           <li class="nav-collapse fs3 nav-collapse-hover">
-            <a class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold" href="./pages/alpargatas.html">Alpargatas</i></a>
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold"
+              href="./pages/alpargatas.html">Alpargatas</a>
           </li>
           <li class="nav-item nav-collapse-hover">
-            <a class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold" href="./pages/bombachas.html">Bombachas/i></a>
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold"
+              href="./pages/bombachas.html">Bombachas</a>
           </li>
           <li class="nav-item nav-collapse-hover">
-            <a class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold" href="./pages/varios.html">Varios</i></a>
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold"
+              href="./pages/varios.html">Varios</a>
           </li>
           <li class="nav-item nav-collapse-hover">
-            <a class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold nav-item_texto"
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold nav-item_texto"
               href="./pages/accercadenosostros.html">Nosotros</i></a>
-          </li>
-
-        </ul>
-      </div>
-      <!-- *******imput-buscar****** -->
-
-      <div
-        class="col-12 col-md-7 col-lg-6 col-xl-6 col-xxl-7 d-flex order-md-2 justify-content-center align-items-center border-top border-topindex">
-
-        <form
-          class="d-flex w-100 justify-content-center p-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 justify-content-md-end justify-content-lg-center justify-content-xl-center"
-          role="search">
-          <input class="form-control form-controlindex input  border fst-italic" type="search" placeholder="Buscar" aria-label="Search" />
-          <button type="submit" class="bg-white d-flex gap-2 buttonindex text-dark border fst-italic">
-            <i class="bi bi-search fs-5"></i>
-            <p class="">Buscar</p>
-          </button>
-
-        </form>
-      </div>
-
+        </li>
+      </ul>
     </div>
+
+    <!-- *******imput-buscar****** -->
+
+    <div
+      class="col-12 col-md-7 col-lg-6 col-xl-6 col-xxl-7 d-flex order-md-2 justify-content-center align-items-center border-top border-topindex">
+
+      <form
+        class="d-flex w-100 justify-content-center p-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 justify-content-md-end justify-content-lg-center justify-content-xl-center"
+        role="search">
+        <input class="form-control form-controlindex input  border fst-italic"
+          type="search" placeholder="Buscar"
+          aria-label="Search" />
+        <button type="submit"
+          class="bg-white d-flex gap-2 buttonindex text-dark border fst-italic">
+          <i class="bi bi-search fs-5"></i>
+        </button>
+
+      </form>
+    </div>
+
   </nav>
-  <!--endregion nav-->
 
   <!--#region main-->
-  <!--#region carousel-->
- <div class="container  containerindex pt-3 mb-5">
+  <!--  clase-->
+
+  <main>
+    <!--#region carousel-->
+    <div class="container">
+      <div id="carouselExampleAutoplaying" class="carousel slide"
+        data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/Diseño_sin_título.png" class="d-block w-100"
+              alt="img_carru01">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/propaganda01.jfif" class="d-block w-100"
+              alt="img_carru02">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/boinas y accesorios.jfif" class="d-block w-100"
+              alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button"
+          data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button"
+          data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- <div class="container  containerindex pt-3 mb-5">
   <div id="carouselExample" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-item active ">
-         <img src="./img/promociones.jfif" class=" d-block w-100 img-hv-1" alt="...">
+         <img src="./img/1688009059910056565_1500x1500-100x100.jpg" class=" d-block h-50 img-hv-1" alt="...">
       </div>
-      <div class="carousel-item"> 
+     <div class="carousel-item"> 
         
-        <img src="./img/promociones01.jfif" class="d-block w-100 img-hv-1" alt="...">
+        <img src="./img/promociones01.jfif" class="d-block h-50 img-hv-1" alt="...">
       </div>
       <div class="carousel-item"> 
        
-        <img src="..." class="d-block w-100" alt="...">
+        <img src="./img/mate_carrusel.jpg" class="d-block h-50 img-hv-1" alt="img3_carru">
+      </div>
+      <div class="carousel-item"> 
+       
+        <img src="./img/alpargatas_carrusel.webp" class="d-block h-50 img-hv-1" alt="img3_carru">
+      </div>
+      <div class="carousel-item"> 
+       
+        <img src="./img/Alpargata01_carrusel.jpg" class="d-block h-50 img-hv-1" alt="img3_carru">
       </div>
     </div>
     <button class="carousel-control-previndex carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -157,239 +237,266 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
- </div>
-  <!--#endregion carousel-->
-  
+ </div>  -->
+    <!--#endregion carousel-->
 
-  <!--#region seccion-1-->
+    <!--#region seccion-1-->
 
+    <section class="row container containerindex mb-5 ">
 
+      <article class="col-12 col-md-8">
 
-  <section class="row container containerindex mb-5">
-
-    <article class="col-12 col-md-8">
-
-      <div class="card mb-3 h-100 border-0">
-        <div class="row g-0 h-100">
-          <div class="col-md-6 img-hv-1">
-            <img src="./img/alpargatas.jfif" class="w-100 rounded roundedindex  h-100 " alt="...">
-          </div>
-          <div class="col-md-6">
-            <div class="card-body">
-              <h5 class="card-title text-dark">Alpargatas</h5>
-              <p class="card-text text-secondary">Material y construcción: Las alpargatas se fabrican típicamente con
-                materiales naturales, como lona, algodón o cáñamo para la parte superior y suela de yute. <!--
-                Comodidad: Las alpargatas son conocidas por ser cómodas y ligeras. Su diseño simple y la flexibilidad de
-                la suela de yute permiten que se adapten al contorno del pie, brindando una sensación agradable al
-                caminar. Estilo unisex: Las alpargatas son un calzado unisex que se adapta tanto a hombres como a
-                mujeres. Origen cultural: Las alpargatas tienen una larga historia y están asociadas con la cultura
-                mediterránea y latinoamericana. Su uso se ha extendido a nivel mundial debido a su comodidad y estilo
-                relajado.--></p>
-              <a href="./pages/alpargatas.html" class="aindex btn btn-warning">Ver <i class="bi bi-plus text-dark"></i></a>
-
+        <div class="card mb-3 h-100 border-0">
+          <div class="row g-0 h-100">
+            <div class="col-md-6 img-hv-1">
+              <img src="./img/alpargatas.jfif"
+                class="w-100 rounded roundedindex  h-100 " alt="img_sec01">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title text-dark">Alpargatas</h5>
+                <p class="card-text text-secondary">Material y construcción:
+                  Las
+                  alpargatas se fabrican típicamente con
+                  materiales naturales, como lona, algodón o cáñamo para la
+                  parte
+                  superior y suela de yute. <!--
+                      Comodidad: Las alpargatas son conocidas por ser cómodas y ligeras. Su diseño simple y la flexibilidad de
+                      la suela de yute permiten que se adapten al contorno del pie, brindando una sensación agradable al
+                      caminar. Estilo unisex: Las alpargatas son un calzado unisex que se adapta tanto a hombres como a
+                      mujeres. Origen cultural: Las alpargatas tienen una larga historia y están asociadas con la cultura
+                      mediterránea y latinoamericana. Su uso se ha extendido a nivel mundial debido a su comodidad y estilo
+                      relajado.-->
+                </p>
+                <a href="./pages/alpargatas.html"
+                  class="aindex btn btn-warning">Ver
+                  <i class="bi bi-plus text-dark"></i></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
 
-    <aside class="aindex col-md-4 d-none d-md-block">
-      
-      <div id="carouselExampleInterval" class="carousel slide h-100" data-bs-ride="carousel">
-        <div class="carousel-inner h-100">
-          <div class="carousel-item active h-100" data-bs-interval="3000">
-            <img src="./img/publi01.jpg" class="d-block w-100 h-100" alt="...">
-          </div>
-          <div class="carousel-item active h-100" data-bs-interval="3000">
-            <img src="./img/publi02.gif" class="d-block w-100 h-100" alt="...">
-          </div>
-          <div class="carousel-item active h-100" data-bs-interval="3000">
-            <img src="./img/publi03.jpg" class="d-block w-100 h-100" alt="...">
-          </div>
-          <div class="carousel-item active h-100" data-bs-interval="3000">
-            <img src="./img/publi04.gif" class="d-block w-100 h-100" alt="...">
-          </div>
-          <div class="carousel-item active h-100" data-bs-interval="3000">
-            <img src="./img/publi05.gif" class="d-block w-100 h-100" alt="...">
-          </div>
-          <div class="carousel-item active h-100" data-bs-interval="3000">
-            <img src="./img/publi06.webp" class="d-block w-100 h-100" alt="...">
-          </div>
-          
-      </div>
-    </aside>
-  </section>
-  <!--#endregion-->
-  <!--#region seccion-2-->
-    <section class="container  containerindex row mb-5"> <!-- contenedor-seccion0 -->
+      <aside class="aindex col-md-4 d-none d-md-block">
 
-    <article class="col-12 ">
-      <div class="card  border-0 h-100">
-        <div class="row g-0 h-100">
-          <div class="col-md-6 img-sec-02">
-            <img src="./img/bombachas.jfif" class=" w-100 rounded roundedindex h-100  " alt="...">
-          </div>
-          <div class="col-md-6">
-            <div class="card-body">
-              <h5 class="card-title text-black">Bombachas Gauchas</h5>
-              <p class="card-text text-secondary">Las bombachas gauchas son parte importante de la cultura y tradiciones
-                gauchas, y todavía se utilizan en eventos folclóricos, festivales, y en ocasiones especiales para
-                mostrar el orgullo de la identidad gaucho. <!-- También son populares entre turistas que buscan experimentar
-                la cultura argentina y la estética del gaucho.Diseño holgado: Son pantalones anchos y sueltos, lo que
-                permite mayor libertad de movimiento mientras se monta a caballo o se realiza trabajo rural.Tejido
-                resistente: Tradicionalmente, las bombachas gauchas se fabrican con telas resistentes y duraderas, como
-                el algodón o el denim.--></p>
-              <a href="./pages/bombachas.html" class="aindex btn btn-warning">Ver <i class="bi bi-plus text-dark"></i></a>
+        <div id="carouselExampleInterval" class="carousel slide h-100"
+          data-bs-ride="carousel">
+          <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100" data-bs-interval="3000">
+              <img src="./img/publi01.jpg" class="d-block w-100 h-100"
+                alt="publi01">
+            </div>
+            <div class=" carousel-item active h-100" data-bs-interval="3000">
+              <img src="./img/publi02.gif" class="d-block w-100 h-100"
+                alt="publi02">
+            </div>
+            <div class=" carousel-item active h-100" data-bs-interval="3000">
+              <img src="./img/publi03.jpg" class="d-block w-100 h-100"
+                alt="publi03">
+            </div>
+            <div class="carousel-item active h-100" data-bs-interval="3000">
+              <img src="./img/publi04.gif" class="d-block w-100 h-100"
+                alt="publi04">
+            </div>
+            <div class="carousel-item active h-100" data-bs-interval="3000">
+              <img src="./img/publi05.gif" class="d-block w-100 h-100"
+                alt="publi05">
+            </div>
+            <div class="carousel-item active h-100" data-bs-interval="3000">
+              <img src="./img/publi06.webp" class="d-block w-100 h-100"
+                alt="publi06">
+            </div>
 
+          </div>
+        </aside>
+      </section>
+      <!--#endregion seccion-1-->
+
+      <!--#region seccion-2-->
+
+      <section class=" container containerindex row mb-5">
+        <article class="col-12 ">
+          <div class="card  border-0 h-100">
+            <div class="row g-0 h-100">
+              <div class="col-md-6 img-sec-02">
+                <img src="./img/bombachas.jfif"
+                  class=" w-100 rounded roundedindex h-100  "
+                  alt="img_sec02">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title text-black">Bombachas Gauchas</h5>
+                  <p class="card-text text-secondary">Las bombachas
+                    gauchas
+                    son parte importante de la cultura y tradiciones
+                    gauchas, y todavía se utilizan en eventos folclóricos,
+                    festivales, y en ocasiones especiales para
+                    mostrar el orgullo de la identidad gaucho.
+                    <!-- También son populares entre turistas que buscan experimentar
+                    la cultura argentina y la estética del gaucho.Diseño holgado: Son pantalones anchos y sueltos, lo que
+                    permite mayor libertad de movimiento mientras se monta a caballo o se realiza trabajo rural.Tejido
+                    resistente: Tradicionalmente, las bombachas gauchas se fabrican con telas resistentes y duraderas, como
+                    el algodón o el denim.-->
+                  </p>
+                  <a href="./pages/bombachas.html"
+                    class="aindex btn btn-warning">Ver <i
+                      class="bi bi-plus text-dark"></i></a>
+
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-    </article>
-  </section>
-  <!--#endregion-->
-  <!--#region seccion-3-->
-  <section class="row container  containerindex  mb-5">
-    <aside class="col-12 col-md-4 mb-5 mb-md-0 ">
-      <div class="container-img_gif">
-        
-        <img class="img-gif w-100 h-100" src="./img/publicidad04.jpg" alt="">
-      </div>
-    </aside>
+        </article>
+      </section>
+      <!--#endregion seccion-2-->
+      <!--#region seccion-3-->
+      <section class="row container  containerindex  mb-5">
+        <aside class="col-12 col-md-4 mb-5 mb-md-0 ">
+          <div class="container-img_gif h-100">
 
-    <article class="col12 col-md-8">
-
-      <div class="card mb-3 h-100 border-0">
-        <div class="row g-0 h-100">
-          <div class="col-md-6">
-            <img src="./img/boinas y accesorios.jfif" class="img-fluid rounded roundedindex h-100" alt="boinas y accesorios">
+            <img class="img-gif w-100 h-100" src="./img/publicidad04.jpg"
+              alt="img_sec03">
           </div>
-          <div class="col-md-6">
-            <div class="card-body">
-              <h5 class="card-title text-dark">Boinas y Accesoriosss</h5>
-              <p class="card-text text-secondary">En conjunto, las boinas y los accesorios gauchos forman parte de una
-                rica tradición cultural que perdura en algunas regiones de América del Sur. Estos elementos reflejan la
-                vida y el trabajo del gaucho, además de ser símbolos de identidad y patrimonio cultural.</p>
-              <a href="./pages/varios.html" class="btn btn-warning">Ver <i class="bi bi-plus text-dark"></i></a>
+        </aside>
 
+        <article class="col12 col-md-8">
+
+          <div class="card mb-3 h-100 border-0">
+            <div class="row g-0 h-100">
+              <div class="col-md-6">
+                <img src="./img/boinas y accesorios.jfif"
+                  class="img-fluid rounded roundedindex h-100"
+                  alt="boinas y accesorios">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title text-dark">Boinas y Accesoriosss</h5>
+                  <p class="card-text text-secondary">En conjunto, las
+                    boinas y los accesorios gauchos forman parte de una
+                    rica tradición cultural que perdura en algunas
+                    regiones
+                    de América del Sur. Estos elementos reflejan la
+                    vida y el trabajo del gaucho, además de ser símbolos
+                    de
+                    identidad y patrimonio cultural.</p>
+                  <a href="./pages/varios.html" class="btn btn-warning">Ver
+                    <i class="bi bi-plus text-dark"></i></a>
+
+                </div>
+              </div>
             </div>
           </div>
+        </article>
+
+      </section>
+      <!--#endregion-->
+    </main>
+    <!--#endregion main-->
+
+    <!--#region footer-->
+    <footer class="bg-dark text-white container-fluid p-2">
+      <section
+        class="container text-start text-md-start text-lg-start text-xl-center text-xxl-center">
+        <div class="row text-start text-md-start">
+
+          <div class=" col-12 col-sm-6 col-lg-4 col-xl-4  mt-3">
+
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
+            <hr class="mb-4">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Illum praesentium qui sed? Nisi vitae praesentium,
+              repudiandae culpa voluptas facilis impedit ut quaerat similique
+              eum sint. Commodi laudantium error soluta totam?
+            </p>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 mx-auto mt-3">
+            <h5
+              class="dis text-uppercase mb-4 font-weight-bold text-primary">Dejanos
+              Ayudarte</h5>
+            <hr class="mb-4">
+            <p>
+              <a href="./pages/login.html" class="text-decoration-none">Tu
+                Cuenta</a>
+            </p>
+            <p>
+              <a href="./pages/Carrito.html" class="text-decoration-none">Tus
+                Pedidos</a>
+            </p>
+            <p>
+              <a href="./pages/error404.html" class="text-decoration-none">Ayuda</a>
+            </p>
+          </div>
+
+          <div class="col-12 col-sm-6  col-lg-4 mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Contacto</h5>
+            <hr class="mb-4">
+            <p>
+              <i class="bi bi-buildings me-3"></i> Gral.Paz 1849 - Tucumán
+            </p>
+            <p>
+              <i class="bi bi-envelope-at-fill me-3"></i><a
+                class="text-decoration-none"
+                href="https://outlook.live.com/owa/">yocampoo@hotmail.com
+              </a>
+            </p>
+            <p>
+              <i class="bi bi-telephone-inbound-fill me-3"></i><a
+                class="text-decoration-none"
+                href="tel:+54 381156811852">+54 381156811852</a>
+            </p>
+          </div>
+
+          <hr class="mb-4">
+
+          <div class="text-center mb-2">
+            <p>
+              Copyright Todos los Derechos Reservados - Grupo Shifu
+            </p>
+          </div>
+
+          <div class="text-center">
+            <ul class="list-unstyled list-inline">
+
+              <li class="list-inline-item">
+                <a href="#" class="fs-2"> <i class="bi bi-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="fs-2"> <i class="bi bi-instagram"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="fs-2"> <i class="bi bi-google"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="fs-2"> <i class="bi bi-youtube"></i></a>
+              </li>
+
+            </ul>
+          </div>
+
         </div>
-      </div>
-    </article>
+      </section>
+      <button class="scroll_top_btn hidden"><i class="bi bi-arrow-up"></i></button>
+    </footer>
 
+    <!--#endregion-->
 
-  </section>
-  <!--#endregion-->
+    <!--#endregion script-->
+    <script src="./index_js.js" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"></script>
+    <script>
+    const tooltipTriggerList = document.querySelectorAll( '[data-bs-toggle="tooltip"]' )
+    const tooltipList = [...tooltipTriggerList].map( tooltipTriggerEl => new bootstrap.Tooltip( tooltipTriggerEl ) )
+  </script>
+  </body>
 
-  
- <!--#endregion main-->
-
- <!--#region footer-->
- <Footer class="bg-dark text-white container-fluid p-2">
-  <section class="container    text-start text-md-start text-lg-start text-xl-center text-xxl-center">
-    <div class="row text-start text-md-start">
-
-      <div class=" col-12 col-md-6 col-lg-4 col-xl-4  mt-3">
-
-        <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
-        <hr class="mb-4">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Illum praesentium qui sed? Nisi vitae praesentium,
-          repudiandae culpa voluptas facilis impedit ut quaerat similique
-          eum sint. Commodi laudantium error soluta totam?
-        </p>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4  mx-auto mt-3">
-        <h5 class="dis text-uppercase mb-4 font-weight-bold text-primary">Dejanos Ayudarte</h5>
-        <hr class="mb-4">
-        <p>
-          <a href="./pages/login.html" class="text-decoration-none">Tu Cuenta</a>
-        </p>
-        <p>
-          <a href="./pages/Carrito.html" class="text-decoration-none">Tus Pedidos</a>
-        </p>
-        <p>
-          <a href="./pages/error404.html" class="text-decoration-none">Ayuda</a>
-        </p>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-12 col-lg-4 col-xl-4 mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Contacto</h5>
-        <hr class="mb-4">
-        <p>
-          <i class="bi bi-buildings me-3"></i> Gral.Paz 1849 - Tucumán
-        </p>
-        <p>
-          <i class="bi bi-envelope-at-fill me-3"></i><a class="text-decoration-none"
-            href="https://outlook.live.com/owa/">yocampoo@hotmail.com
-          </a>
-        </p>
-        <p>
-          <i class="bi bi-telephone-inbound-fill me-3"></i><a class="text-decoration-none"
-            href="tel:+54 381156811852">+54 381156811852</a>
-        </p>
-      </div>
-
-      <hr class="mb-4">
-
-      <div class="text-center mb-2">
-        <p>
-          Copyright Todos los Derechos Reservados - Grupo Shifu
-          <a href="#">
-            <strong class="text-primary">Test</strong>
-          </a>
-        </p>
-      </div>
-
-      <div class="text-center">
-        <ul class="list-unstyled list-inline">
-
-          <li class="list-inline-item">
-            <a href="#" class="fs-2"> <i class="bi bi-facebook"></i></a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#" class="fs-2"> <i class="bi bi-instagram"></i></a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#" class="fs-2"> <i class="bi bi-google"></i></a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#" class="fs-2"> <i class="bi bi-youtube"></i></a>
-          </li>
-
-        </ul>
-      </div>
-
-
-
-    </div>
-  </section>
-</Footer>
-
- <!--#endregion-->
-
-
-
-
-</script>
-<!--#endregion script-->
-
-</body>
-
-
-
-
-   
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-<script>
-  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
-</script>
 </html>

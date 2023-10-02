@@ -9,11 +9,11 @@
     --color-cinco-verde: rgb(47, 255, 99);
     --bg-color-opacity: rgba(205, 224, 34, 0.26);
     --font-family: 'Roboto', sans-serif;
-
+    --theme-dark-color:#222;
     --dark: #16191c;
     --dark-x: #1e2126;
     --light: #ffffff;
-
+    
 }
 
 * {
@@ -69,6 +69,7 @@
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
+
     padding-right: 0;
     padding-left: 0;
     margin-right: auto;
@@ -161,9 +162,49 @@
     transition: all .3s ease-out;
 }
 
+/* ********MI ESTILOS EVENTOS***** */
 
-
+.scroll_top_btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    
+    
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--color-terciario-gris);
+    color: var(--color-quaternario-azul);
+    transition: all 0.3s ease-out;
+}
+.scroll_top_btn:hover {
+    cursor: pointer;
+    background-color: var(--color-quaternario-azul);
+    color: var(--color-terciario-gris);
+}
+.scroll_top_btn i {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+/* *****************DarkThemeButton***************** */
+.theme_dark {
+   
+    border: 0;
+    color: yellow;
+    border-radius: 50%;
+    background-color: var( --dark);
+}
+.dark_mode {
+   
+    background-color: var(--theme-dark-color)  ;
+}
 /* ********MI ESTILOS***** */
+
 .bg-color-opacity {
     background-color: rgba(189, 177, 177, 0.404);
 }
@@ -242,8 +283,9 @@
     border-bottom-right-radius: .375rem;
 }
 
-.container-main-caroousel {
-    height: 15vh;
+.carousel-item img {
+
+    object-fit: contain;
 }
 
 
@@ -304,6 +346,7 @@ footer i {
 
 .bg-dark {
     background-color: var(--dark) !important;
+    
 }
 
 .bg-dark-x,
@@ -434,8 +477,8 @@ footer i {
         font-size: .8rem;
     }
   .img-hv-1 {
-     
-       max-height: 30rem !important;
+    max-height: 200px;
+     object-fit: cover;
     } 
     .img-sec-02 {
 
@@ -444,6 +487,10 @@ footer i {
     .roundedindex {
         border-top-right-radius: 0 !important;
         border-bottom-right-radius: 0 !important;
+    }
+    .carousel {
+        height: 75vh;
+        overflow: hidden;
     }
 
 }
