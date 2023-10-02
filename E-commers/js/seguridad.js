@@ -86,5 +86,6 @@ Registar.addEventListener("click", (e) => {
   } else {
     alert("Contraseñas No Coinciden");
   }
+  
 });
 //#endregion Registrar

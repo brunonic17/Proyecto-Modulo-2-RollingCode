@@ -21,7 +21,7 @@ class Producto {
 
 let registroProducto = new Producto();
 
-  let Id_Prod = "1";
+  let Id_Prod = 1;
   let RubroArt="";
   let NombreArt = "";
   let Talle = "";
@@ -29,7 +29,7 @@ let registroProducto = new Producto();
   let Precio = "";
   let Stock = "";
   let Urlimg ="";
-
+  let ii = 0
 Rub.addEventListener(
   "change",
   (e) => {
@@ -117,5 +117,57 @@ Registar.addEventListener("click", (e) => {
         alert("PRODUCTO Ya Registrado");
       }
     }
-  });
-//#endregion Registrar
+    console.log(Id_Prod)
+  }
+  );
+  
+
+//dregion Registrar
+
+//#region productos en tabla
+let arrayprduct= JSON.parse(localStorage.getItem("productos"))
+let htmltablaproducto=""
+
+arrayprduct.map(function(prod){
+  htmltablaproducto += `<tr>
+              <th scope="row">${prod.Id_Prod}</th>
+              <td>${prod.NombreArt}</td>
+              <td>${prod.Descripcion}</td>
+              <td>${prod.RubroArt}</td>
+              <td><img src="${prod.Urlimg}" alt=""></td>
+              <td>${prod.Precio}</td>
+              <td>${prod.Stock}</td>
+              <td><button type="button" class="btn btn-success">Editar</button>
+                  <button type="button" class="btn btn-danger" id="${prod.Id_Prod}">Eliminar</button>
+              </td>
+          </tr>`       
+})
+
+
+const tbody=document.getElementById("tbody")
+
+tbody.innerHTML=htmltablaproducto
+
+// let array_ids_m=[]
+// let array_ids_e=[]
+
+// tbody.childNodes.forEach((tablerow)=>{
+// tablerow.childNodes.forEach((tabledatacell)=>{
+// if(tabledatacell.length>1){
+//   array_ids_m.push(tabledatacell.firstChild.id);
+//   array_ids_e.push(tabledatacell.lastChild.id);
+// }})})
+// console.log (array_ids_m)
+// console.log (array_ids_e)
+
+
+
+
+let btneliminar = document.getElementById(Id_Prod)
+
+btneliminar.addEventListener("click", (e) => {
+arrayprduct.splice(Id_Prod, 1)
+localStorage.setItem("productos", JSON.stringify(arrayprduct));
+
+
+})

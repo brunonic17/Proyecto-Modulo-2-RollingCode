@@ -183,7 +183,7 @@
                         <input type="number" class="form-control" id="Stock">
                     </div>
                 </div>
-                <div class="d-flex justify-content-center"><button id="AgregaProd" type="submit" class="btn btn-primary bg-success">Agregar Producto</button>
+                <div class="d-flex justify-content-center"><button id="AgregaProd" type="submit" onclick="window.location.reload()" class="btn btn-primary bg-success">Agregar Producto</button>
                 </div>  
             </form>
         </div>
@@ -201,96 +201,8 @@
                         <th scope="col">Accion</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>alpargata-lisa</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, id!</td>
-                        <td>alpargatas</td>
-                        <td><img src="" alt=""></td>
-                        <td>2800</td>
-                        <td>20</td>
-                        <td><button type="button" class="btn btn-success">Editar</button>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>alpargata-estampada</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, veniam.</td>
-                        <td>alpargatas</td>
-                        <td><img src="" alt=""></td>
-                        <td>3000</td>
-                        <td>30</td>
-                        <td><button type="button" class="btn btn-success">Editar</button>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>bombacha-lisa</td>
-                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium delectus dolores
-                            nesciunt.</td>
-                        <td>bombachas</td>
-                        <td><img src="" alt=""></td>
-                        <td>7000</td>
-                        <td>50</td>
-                        <td><button type="button" class="btn btn-success">Editar</button>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>bombacha-lisa</td>
-                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium delectus dolores
-                            nesciunt.</td>
-                        <td>bombachas</td>
-                        <td><img src="" alt=""></td>
-                        <td>7000</td>
-                        <td>50</td>
-                        <td><button type="button" class="btn btn-success">Editar</button>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>bombacha-lisa</td>
-                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium delectus dolores
-                            nesciunt.</td>
-                        <td>bombachas</td>
-                        <td><img src="" alt=""></td>
-                        <td>7000</td>
-                        <td>50</td>
-                        <td><button type="button" class="btn btn-success">Editar</button>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>bombacha-lisa</td>
-                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium delectus dolores
-                            nesciunt.</td>
-                        <td>bombachas</td>
-                        <td><img src="" alt=""></td>
-                        <td>7000</td>
-                        <td>50</td>
-                        <td><button type="button" class="btn btn-success">Editar</button>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td>bombacha-lisa</td>
-                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium delectus dolores
-                            nesciunt.</td>
-                        <td>bombachas</td>
-                        <td><img src="" alt=""></td>
-                        <td>7000</td>
-                        <td>50</td>
-                        <td><button type="button" class="btn btn-success">Editar</button>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
+                <tbody id="tbody">
+              
                 </tbody>
             </table>
         </div>
