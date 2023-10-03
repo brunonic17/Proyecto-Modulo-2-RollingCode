@@ -130,15 +130,15 @@ let htmltablaproducto=""
 
 let pp = arrayprduct.map(function(prod){
   htmltablaproducto += `<tr>
-              
+              <th scope="row">${prod.Id_Prod}</th>
               <td>${prod.NombreArt}</td>
               <td>${prod.Descripcion}</td>
               <td>${prod.RubroArt}</td>
-              <td class="d-flex justify-content-center"><img src="${prod.Urlimg}" class="img-fluid w-25" alt="${prod.NombreArt}"></td>
+              <td><img src="${prod.Urlimg}" alt=""></td>
               <td>${prod.Precio}</td>
               <td>${prod.Stock}</td>
               <td><button type="button" class="btn btn-success">Editar</button>
-                  <button type="button" onclick="window.location.reload()" class="btn btn-danger" id="${prod.Id_Prod}">Eliminar</button>
+                  <button type="button" class="btn btn-danger" id="${prod.Id_Prod}">Eliminar</button>
               </td>
           </tr>`       
         })
@@ -147,36 +147,6 @@ let pp = arrayprduct.map(function(prod){
 const tbody=document.getElementById("tbody")
 
 tbody.innerHTML=htmltablaproducto
-
-const productos = JSON.parse(localStorage.getItem("productos"));
-const ids = [];
-
-for (let index = 0; index < productos.length; index++) {
-  const element = productos[index];
-  ids.push(element.Id_Prod);
- }
-for (let index = 0; index < ids.length; index++) {
-  const id= ids[index];
-  let btn = document.getElementById(id);
-
-  if (btn === null) continue;
-
-  btn.addEventListener("click", (e) => {
-    let elimina = +e.target.id;
-    console.log(elimina);
-    console.log(productos);
-    let prodeliminar = productos.findIndex(registroProducto => registroProducto.Id_Prod === elimina);
-    console.log(prodeliminar);
-    productos.splice(prodeliminar,1);
-    console.log(productos);
-    localStorage.setItem("productos", JSON.stringify(productos));
-
-    //console.log(productos.find(registroProducto => registroProducto.Id_Prod === elimina));
-    //console.log(prodeliminar)
-    
-  });
-
-}
 
 // let array_ids_m=[]
 // let array_ids_e=[]
@@ -193,10 +163,12 @@ for (let index = 0; index < ids.length; index++) {
 
 
 
-// let btneliminar = document.getElementById(Id_Prod)
+let btneliminar = document.getElementById(Id_Prod)
 
-// btneliminar.addEventListener("click", (e) => {
-// console.log(pp.id)
-//   //arrayprduct.splice(Id_Prod, 2)
-// localStorage.setItem("productos", JSON.stringify(arrayprduct));
-//})
+btneliminar.addEventListener("click", (e) => {
+console.log(pp.id)
+  //arrayprduct.splice(Id_Prod, 2)
+localStorage.setItem("productos", JSON.stringify(arrayprduct));
+
+
+})
