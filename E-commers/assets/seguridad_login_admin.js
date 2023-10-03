@@ -5,7 +5,7 @@ const Contrase_Confir = document.getElementById("inputConfirContrase");
 const Registar = document.getElementById("UsuarioGuardar");
 
 
-// export default function  seguridad (Nomb, Mail, Contrase_Mail, Contrase_Confir, Registar ){
+// export default function seguridad (Nomb, Mail, Contrase_Mail, Contrase_Confir, Registar ){
 // let $Nomb = document.querySelector(Nomb)
 // console.log($Nomb)
 class Usuario {
@@ -72,6 +72,7 @@ Registar.addEventListener("click", (e) => {
     if (usuariosLocalStorage === null) {
       registroUsuario.Id_Usu = Id_Usu;
       localStorage.setItem("usuarios", JSON.stringify([registroUsuario]));
+      
     } else {
       let conf_email = usuariosLocalStorage.find(
         (Usuario) => Usuario.Email === registroUsuario.Email

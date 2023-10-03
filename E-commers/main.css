@@ -23,7 +23,12 @@
 .bodyindex {
     background-color:rgb(236, 240, 241);
 }
-
+.display_none {
+    display: none;
+}
+.display_block {
+    display: block;
+}
 
 .container-bg-img {
     background-image: url(./img/353065597_710813511054060_9158423684060028871_n.jpg);
@@ -54,8 +59,8 @@
     border-bottom-right-radius: 0;
 
 }
-
 .navbar-toggler {
+
     padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
     font-size: var(--bs-navbar-toggler-font-size);
     line-height: 1;
@@ -261,6 +266,9 @@
     display: none;
 
 }
+.fs-4 {
+    font-size: calc(1.80rem + .3vw)!important;
+}
 .nav-collapse-hover:hover {
     background-color: #4b76b6;
     transition: all .3s ease-in-out;
@@ -449,7 +457,7 @@ footer i {
     }
 
     .nav-item {
-        font-size: calc(1rem + 0.9vw) !important;
+        font-size: calc(1.25rem + 0.9vw) !important;
 
     }
 

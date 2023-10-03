@@ -53,28 +53,49 @@
       <div class="col-7 col-sm-6  col-md-3 col-lg-3 col-xl-3 col-xxl-3 order-md-3 d-flex justify-content-end pe-md-4">
 
         <ul class="navbar-nav gap-2 gap-sm-3 gap-md-3 gap-lg-3 gap-xl-4 gap-xxl-4 d-flex flex-row justify-content-end">
-          <li class="nav-item fs-4">
+          <li class="nav-item fs-4" id="icono_inicio">
             <a class=" aindex nav-link active fw-bold text-white" aria-current="page" href="../index.html" data-bs-toggle="tooltip"
               data-bs-title="Inicio" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"><i
                 class="bi bi-house-door"></i></a>
           </li>
-          <li class="nav-item fs-4">
+          <li class="nav-item fs-4" id="icono_acceder">
             <a class="aindex nav-link text-white fw-bold" aria-current="page" href="./login.html" data-bs-toggle="tooltip"
               data-bs-title="Acceder" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
-              href="#"><i class="bi bi-person-circle"></i></a>
+              href="#" ><i class="bi bi-person-circle"></i></a>
           </li>
-          <li class="nav-item fs-4">
+          <!-- <li class="nav-item fs-4">
+            <a class="aindex nav-link text-white fw-bold" aria-current="page" href="./login.html" data-bs-toggle="tooltip"
+              data-bs-title="Acceder" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
+              href="#">👦</a>
+          </li> -->
+          <li class="nav-item fs-4" id="icono_contacto" >
+            <a class="aindex nav-link text-white fw-bold aa" aria-current="page"
+              href="./pages/contacto.html"
+              data-bs-toggle="tooltip" data-bs-title="Contacto"
+              data-bs-placement="bottom"
+              data-bs-custom-class="custom-tooltip fst-italic" href="#"  ><i
+                class="bi bi-telephone"></i></a>
+          </li>
+          <li class="nav-item fs-4 " id="icono_nosotros" >
+            <a class="aindex nav-link text-white fw-bold" aria-current="page"
+              href="./pages/accercadenosostros.html"
+              data-bs-toggle="tooltip" data-bs-title="Nosotros"
+              data-bs-placement="bottom"
+              data-bs-custom-class="custom-tooltip fst-italic" href="#"><i
+                class="bi bi-people-fill"></i></a>
+          </li>
+          <li class="nav-item fs-4 display_none" id="icono_admin">
             <a class="aindex nav-link text-white fw-bold" aria-current="page" href="./contacto.html" data-bs-toggle="tooltip"
-              data-bs-title="Contacto" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
-              href="#"><i class="bi bi-telephone"></i></a>
+              data-bs-title="Admin" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
+              href="#" ><i class="bi bi-person-gear"></i></a>
           </li>
-          <li class="nav-item fs-4 nav-item-nosotros">
+          <li class="nav-item fs-4  display_none" id="icono_cerrar_sesion">
             <a class="aindex nav-link text-white fw-bold" aria-current="page" href="./accercadenosostros.html" data-bs-toggle="tooltip"
-              data-bs-title="Nosotros" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
-              href="#"><i class="bi bi-people-fill"></i></a>
+              data-bs-title="Cerrar Sesion" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
+              href="#"><i class="bi bi-person-fill-slash"></i></a>
           </li>
 
-          <li class="nav-item fs-4" >
+          <!-- <li class="nav-item fs-4" >
             <a class="aindex nav-link text-warning fw-bold" href="./Carrito.html" aria-current="page" data-bs-toggle="tooltip"
               data-bs-title="Ver carrito" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"><i
                 class="bi bi-cart2">
@@ -84,7 +105,7 @@
                 </span>
               </i></a>
 
-          </li>
+          </li> -->
         </ul>
       
       </div>
@@ -209,15 +230,15 @@
             <div class="mb-4">
               <label for="exampleInputEmail1" class="form-label">Email</label>
               <input type="email" class="form-control bg-dark-x border-0" placeholder="Ingresa tu Email"
-                id="exampleInputEmail1" aria-describedby="emailHelp">
+                id="inputEmail" aria-describedby="emailHelp">
             </div>
             <div class="mb-4">
               <label for="exampleInputPassword1" class="form-label">Contraseña</label>
               <input type="password" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa una Contraseña"
-                id="exampleInputPassword1">
+                id="inputContrase">
               <a href="#" id="emailHelp" class="">¿Has olvidado la Contraseña?</a>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg mb-0">Iniciar Sesión</button>
+            <button type="submit" class="btn btn-primary btn-lg mb-0" id="UsuarioLogin">Iniciar Sesión</button>
           </form>
 
           <p class="text-muted mb-0">o inicia Sesión con:</p>
@@ -332,4 +353,5 @@
  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 </script>
+<script src="../assets/login_registrar.js"></script>
   </body>

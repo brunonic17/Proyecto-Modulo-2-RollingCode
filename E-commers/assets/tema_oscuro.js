@@ -22,7 +22,6 @@ export default function themeDark(themeBtn, classMode) {
 
   d.addEventListener("click", (e) => {
     if (e.target.matches(themeBtn)) {
-
     if ($themedark.innerHTML === luna) {
         darkMode();
     } else {
