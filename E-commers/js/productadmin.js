@@ -120,9 +120,7 @@ Registar.addEventListener("click", (e) => {
     console.log(Id_Prod)
   }
   );
-  
-
-//dregion Registrar
+//#endregion Registrar
 
 //#region productos en tabla
 let arrayprduct= JSON.parse(localStorage.getItem("productos"))
@@ -137,11 +135,11 @@ let pp = arrayprduct.map(function(prod){
               <td class="d-flex justify-content-center"><img src="${prod.Urlimg}" class="img-fluid w-25" alt="${prod.NombreArt}"></td>
               <td>${prod.Precio}</td>
               <td>${prod.Stock}</td>
-              <td><button type="button" class="btn btn-success">Editar</button>
-                  <button type="button" onclick="window.location.reload()" class="btn btn-danger" id="${prod.Id_Prod}">Eliminar</button>
+              <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat" id="m-${prod.Id_Prod}">Editar</button>
+                  // <button type="button" onclick="window.location.reload()" class="btn btn-danger" id="${prod.Id_Prod}">Eliminar</button>
               </td>
           </tr>`       
-        })
+})
 
 
 const tbody=document.getElementById("tbody")
@@ -150,14 +148,20 @@ tbody.innerHTML=htmltablaproducto
 
 const productos = JSON.parse(localStorage.getItem("productos"));
 const ids = [];
+const ids_m = [];
 
 for (let index = 0; index < productos.length; index++) {
   const element = productos[index];
   ids.push(element.Id_Prod);
- }
+  ids_m.push("m-"+element.Id_Prod);
+}
+ console.log(ids);
+ console.log(ids_m);
 for (let index = 0; index < ids.length; index++) {
   const id= ids[index];
+  const id_m= ids_m[index];
   let btn = document.getElementById(id);
+  let btn_m = document.getElementById(id_m);
 
   if (btn === null) continue;
 
@@ -171,32 +175,51 @@ for (let index = 0; index < ids.length; index++) {
     console.log(productos);
     localStorage.setItem("productos", JSON.stringify(productos));
 
-    //console.log(productos.find(registroProducto => registroProducto.Id_Prod === elimina));
-    //console.log(prodeliminar)
-    
   });
 
+  if (btn_m === null) continue;
+
+  btn_m.addEventListener("click", (e) => {
+    let modifica = e.target.id;
+    modifica = +modifica.slice(2)
+
+    console.log(modifica);
+    console.log(productos);
+    let prodmodifica = productos.findIndex(registroProducto => registroProducto.Id_Prod === modifica);
+    console.log(productos[prodmodifica]);
+    console.log(prodmodifica);
+
+    let htmlmodifica=""
+
+
+  htmlmodifica +=`<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>` 
+
+
+
+  });
 }
-
-// let array_ids_m=[]
-// let array_ids_e=[]
-
-// tbody.childNodes.forEach((tablerow)=>{
-// tablerow.childNodes.forEach((tabledatacell)=>{
-// if(tabledatacell.length>1){
-//   array_ids_m.push(tabledatacell.firstChild.id);
-//   array_ids_e.push(tabledatacell.lastChild.id);
-// }})})
-// console.log (array_ids_m)
-// console.log (array_ids_e)
-
-
-
-
-// let btneliminar = document.getElementById(Id_Prod)
-
-// btneliminar.addEventListener("click", (e) => {
-// console.log(pp.id)
-//   //arrayprduct.splice(Id_Prod, 2)
-// localStorage.setItem("productos", JSON.stringify(arrayprduct));
-//})
