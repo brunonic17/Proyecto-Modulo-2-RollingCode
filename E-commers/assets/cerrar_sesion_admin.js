@@ -1,10 +1,7 @@
+ 
+    let $btnCerrarSesion = document.getElementById("icono_finalizar_sesion")
 
- export default function cerrarSesion () {
-    let $cerrarSesion = document.getElementById("icono_cerrar_sesion");
-
-    $cerrarSesion.addEventListener('click', function (e) {
-
-            localStorage.removeItem("carrito")
-    // window.location.href = "../index.html"
+    $btnCerrarSesion.addEventListener('click', (e) => {
+        localStorage.removeItem("administrador");
+        window.location.href = "../index.html"
     })
-}

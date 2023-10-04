@@ -1,6 +1,7 @@
 // import registrarLogin from "./assets/login_registrar.js";
 // import seguridad from "./assets/seguridad_login_admin.js";
 import carrito from "./assets/carrito.js";
+// import cerrarSesionAdmin from "./assets/cerrar_sesion_admin.js";
 import scrollTopBtn from "./assets/sroll_btn.js"; 
 import themeDark from "./assets/tema_oscuro.js";
 
@@ -13,6 +14,8 @@ d.addEventListener("DOMContentLoaded", e =>{ //traigo la function y les pasos
     // registrarLogin( "#input_nomb","#input_email", "#btn_regis")
     // seguridad("#inputNombre", "#inputEmail", "#inputContrase", "#inputConfirContrase","#UsuarioGuardar")
     
+    
 })
+    // cerrarSesionAdmin()
     carrito()
     themeDark(".theme_dark", "dark_mode")

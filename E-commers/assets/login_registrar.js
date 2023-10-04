@@ -57,7 +57,7 @@ Contrase_Mail.addEventListener(
   //  $iconoAcceder.innerHTML = `<i class="bi bi-person-fill-slash"></i>`;
   //  $iconoContacto.innerHTML = `<i class="bi bi-person-gear"></i>`;
   // $a.setAttribute("data-bs-title", "Admin");
-  localStorage.setItem("adminAbierto", "trabajandoenpage");
+  localStorage.setItem("administrador", "habilitado");
   window.location.href = "./admin-login-panel.html";
   // alert("Puede entrar como Administrador, habilita El Modulo para Administrar");
   // console.log("Usuario: ",conf_email.Nombre," Tipo: ",conf_email.TipoUsuario);
@@ -67,7 +67,7 @@ Contrase_Mail.addEventListener(
 let $carrito = document.getElementById("carrito");
 let carro = () => {
   window.location.href = "../index.html"
-  localStorage.setItem("carrito", "habilitado")
+  localStorage.setItem("usuario", "habilitado")
 
       
 }    

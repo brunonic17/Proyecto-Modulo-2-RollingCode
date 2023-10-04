@@ -6,7 +6,7 @@ const Pcio = document.getElementById("Precio");
 const St = document.getElementById("Stock");
 const Img = document.getElementById("Urlimg");
 const Registar = document.getElementById("AgregaProd");
-const $cerrarSesion = document.getElementById("icono_cerrar_sesion");
+
 
 class Producto {
   Id_Prod = "";
@@ -179,10 +179,7 @@ for (let index = 0; index < ids.length; index++) {
 
 }
 
-    $cerrarSesion.addEventListener("click", ()=> {
-        console.log("hola soy el boton")
-        window.location.href = "../index.html"
-    })
+   
 
 // let array_ids_m=[]
 // let array_ids_e=[]
