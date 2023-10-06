@@ -19,14 +19,14 @@ class Producto {
   Urlimg ="";
 }
 let arrayprduct= JSON.parse(localStorage.getItem("productos"))
-let htmltablaproducto=""
+let htmltablatarjetas=""
 console.log(arrayprduct);
 
     let pp = arrayprduct.map(function(prod){
-        htmltablatarjetas =`<div class="card" style="width: 18rem;">
-            <img src="/E-commers/img/alpargatas.jpg" class="card-img-top imgcard" alt="...">
+        htmltablatarjetas +=`<div class="card" style="width: 18rem;">
+            <img src="${prod.Urlimg}" class="card-img-top imgcard" alt="${prod.NombreArt}">
             <div class="card-body">
-            <h5 class="card-title">Alpargatas Lisas</h5>
+            <h5 class="card-title">${prod.NombreArt}</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                 content.</p>
             <a href="./alpargata-lisa.html" class="btn btn-primary">Ver Producto</a>
@@ -35,5 +35,8 @@ console.log(arrayprduct);
     })
 
         const tarjetas=document.getElementById("tarjetas")
+        arrayprduct.forEach(element => {
+            tarjetas.innerHTML=htmltablatarjetas
+        });
 
-        tarjetas.innerHTML=htmltablatarjetas
+        

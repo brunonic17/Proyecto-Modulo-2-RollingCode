@@ -141,7 +141,7 @@ let pp = arrayprduct.map(function(prod){
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">${prod.NombreArt}</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">MODIFICANDO</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -149,18 +149,11 @@ let pp = arrayprduct.map(function(prod){
        <div class="row">
                     <div class="mb-3 col-6">
                         <label for="Rubro" class="form-label">Rubro</label>
-                      
-                        <select class="form-select" aria-label="Rubro" id="mRubro">
-                            <option selected>Elige una Categoria</option>
-                            <option value="Alpargatas">Alpargatas</option>
-                            <option value="Bombachas">Bombachas</option>
-                            <option value="Boinas">Boinas</option>
-                            <option value="Varios">Varios</option>
-                        </select>
+                        <h3 id="mRubro">${prod.RubroArt}</h3>
                     </div>
                     <div class="mb-3 col-6">
                         <label for="NombreArt" class="form-label">Nombre del Articulo</label>
-                        <input type="text" class="form-control" id="mNombreArt" >
+                        <h3 id="mNombreArt">${prod.NombreArt}</h3>
                     </div>
                 </div>
                 <div class="row">
@@ -251,8 +244,8 @@ for (let index = 0; index < ids.length; index++) {
     
     console.log(prodmodifica);
 
-const mRub = document.getElementById("mRubro");
-const mNomb = document.getElementById("mNombreArt");
+const mRub = productoModificar.RubroArt;
+const mNomb =  productoModificar.NombreArt;
 const mTal = document.getElementById("mTalle");
 const mDesc = document.getElementById("mDescripcion");
 const mPcio = document.getElementById("mPrecio");
@@ -261,8 +254,8 @@ const mImg = document.getElementById("mUrlimg");
 const mRegistar = document.getElementById("mAgregaProd");
 
 
-  let mRubroArt="";
-  let mNombreArt = "";
+  let mRubroArt=mRub;
+  let mNombreArt = mNomb;
   let mTalle = "";
   let mDescripcion = "";
   let mPrecio = "";
@@ -277,20 +270,20 @@ const mRegistar = document.getElementById("mAgregaProd");
   // productoModificar.Stock = mStock;
   // productoModificar.Urlimg = mUrlimg
  
- mRub.addEventListener(
-  "change",
-  (e) => {
-    mRubroArt = e.target.value;
-  },
-  false
-);
-mNomb.addEventListener(
-  "change",
-  (e) => {
-    mNombreArt = e.target.value;
-  },
-  false
-);
+//  mRub.addEventListener(
+//   "change",
+//   (e) => {
+//     mRubroArt = e.target.value;
+//   },
+//   false
+// );
+// mNomb.addEventListener(
+//   "change",
+//   (e) => {
+//     mNombreArt = e.target.value;
+//   },
+//   false
+// );
 mTal.addEventListener(
   "change",
   (e) => {
