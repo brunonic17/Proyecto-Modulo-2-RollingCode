@@ -16,7 +16,6 @@ class Producto {
   Precio = "";
   Stock = "";
   Urlimg ="";
-
 }
 
 let registroProducto = new Producto();
