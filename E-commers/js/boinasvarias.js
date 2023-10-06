@@ -20,7 +20,7 @@ class Producto {
 }
 let arrayprduct= JSON.parse(localStorage.getItem("productos"))
 arrayprduct = arrayprduct.filter(
-    (Producto) => Producto.RubroArt === "Alpargatas"
+    (Producto) => Producto.RubroArt === "Boinas"
   );
 let htmltablatarjetas=""
 console.log(arrayprduct);
@@ -33,7 +33,7 @@ console.log(arrayprduct);
             <h5 class="card-title">Precio: ${prod.Precio}</h5>
             <h5 class="card-title">Stock: ${prod.Stock}</h5>
             <p class="card-text">${prod.Descripcion}</p>
-            <a href="./alpargata-lisa.html" class="btn btn-primary">Ver Producto</a>
+            <a href="./bombacha con guarda.html" class="btn btn-primary">Ver Producto</a>
             </div>
         </div>`
     })

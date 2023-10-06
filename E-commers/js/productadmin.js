@@ -127,10 +127,9 @@ let htmltablaproducto=""
 
 let pp = arrayprduct.map(function(prod){
   htmltablaproducto += `<tr>
-              
+              <td>${prod.RubroArt}</td>
               <td>${prod.NombreArt}</td>
               <td>${prod.Descripcion}</td>
-              <td>${prod.RubroArt}</td>
               <td class="d-flex justify-content-center"><img src="${prod.Urlimg}" class="img-fluid w-25" alt="${prod.NombreArt}"></td>
               <td>${prod.Precio}</td>
               <td>${prod.Stock}</td>
