@@ -1,7 +1,7 @@
 
 const creadorprod=document.getElementById("creadorprod")
 let prodsession= JSON.parse(sessionStorage.getItem("detallepro"))
-
+console.log(prodsession)
 // prodsession.RubroArt
 // prodsession.NombreArt
 // prodsession.Talle
@@ -15,13 +15,13 @@ htmpro +=`<div class="row pt-3">
   <div id="carouselExample" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="${prodsession.Urlimg}" class="d-block w-100" alt="...">
+        <img src="${prodsession.Urlimg}" class="d-block w-100" alt="${prodsession.NombreArt}">
       </div>
       <div class="carousel-item">
-        <img src="../img/alpa1.JPG" class="d-block w-100" alt="...">
+      <img src="${prodsession.Urlimg2}" class="d-block w-100" alt="${prodsession.NombreArt}">
       </div>
       <div class="carousel-item">
-        <img src="../img/alpa2.JPG" class="d-block w-100" alt="...">
+      <img src="${prodsession.Urlimg3}" class="d-block w-100" alt="${prodsession.NombreArt}">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -38,12 +38,15 @@ htmpro +=`<div class="row pt-3">
   <div class="row justify-content-center">
     <div class="col-lg-6">
       <div class="pt-5">
+        <label for="">Articulo:</label>
         <h3>${prodsession.NombreArt}</h3>
-        <span class="text-medium">$ ${prodsession.Precio}</span>
+        <label for="">Precio:</label>
+        <h4 class="form-control">$ ${prodsession.Precio}</h4>
         <hr>
+        <label for="">Descrición:</label>
         <p>${prodsession.Descripcion}</p>
         <br>
-        <label for="">Selecciona un color</label>
+        <label for="">Selecciona un color:</label>
         <div class="pt-3">
           <input class="form-check-input bg-color-check1" type="radio" name="flexRadioDefault"
             id="flexRadioDefault1">
@@ -76,6 +79,7 @@ htmpro +=`<div class="row pt-3">
 </div>`
 
 creadorprod.innerHTML=htmpro;
+
 const cant=document.getElementById("cantidad");
 let cantidad="";
 cant.addEventListener("change", (e)=> cantidad=e.target.value,false );
@@ -87,17 +91,21 @@ let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
 btn_agregar.addEventListener("click", (e) =>{
     e.preventDefault();
     e.stopPropagation();
-
-    prodsession.cantidad=cantidad
-    let precio=prodsession.Precio
-    prodsession.importe= precio*cantidad
-
-    if (carritoLocalStorage === null) {
-      
-        localStorage.setItem("carrito", JSON.stringify([prodsession]))
-    } else {
-        carritoLocalStorage.push(prodsession);
-        localStorage.setItem("carrito", JSON.stringify(carritoLocalStorage))
-    }
-    
+    if (cantidad > "0") {
+        prodsession.cantidad=cantidad
+        let precio=prodsession.Precio
+        prodsession.importe= precio*cantidad
+        console.log(prodsession.cantidad);
+        console.log(prodsession.importe);
+        console.log(prodsession);
+        if (carritoLocalStorage === null) {
+          
+            localStorage.setItem("carrito", JSON.stringify([prodsession]))
+        } else {
+            carritoLocalStorage.push(prodsession);
+            localStorage.setItem("carrito", JSON.stringify(carritoLocalStorage))
+        }
+  } else {
+        alert("Debe elegir la cantidad a Comprar");
+  }
 })

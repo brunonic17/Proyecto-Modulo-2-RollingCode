@@ -728,3 +728,21 @@ footer i {
     width: 100px;
     height: 100px;
 }
+
+#listaArticulos{
+    font-size: 30px;
+    margin-top: 20px;
+    list-style: none;
+    font-weight: 600;
+    background-color: #ffffff;
+    text-align: center;
+    position: fixed;
+    width: 30%;
+}
+li{
+    margin: 5px 0;
+}
+
+.filtro{
+    display: none;
+}
