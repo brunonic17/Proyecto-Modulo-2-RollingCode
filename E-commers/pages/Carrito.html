@@ -149,12 +149,12 @@
                             <tbody>
                                 <tr>
                                     <td>Total Articulos</td>
-                                    <td>5</td>
+                                    <td id="spancant"></td>
                                 </tr>
         
                                 <tr>
                                     <td>Total a Pagar</td>
-                                    <td>$ 33.400,00</td>
+                                    <td id="spantotal">$ </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -175,50 +175,24 @@
             <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 py-4 text-bg-light">
                 <h2>Contenido del Carrito</h2>
                 <table class="table table-dark table-striped">
-                    <thead>
-                        <th>Cant</th>
-                        <th>Detalle</th>
-                        <th>Precio</th>
-                        <th>Total</th>
-                        <th>Eliminar</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Alparg. Lisa/37 Verde</td>
-                            <td>2.800</td>
-                            <td>2.800</td>
-                            <td><input class="form-check-input" type="checkbox" value=""></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Boina Bord. Roja</td>
-                            <td>4.500</td>
-                            <td>9.000</td>
-                            <td><input class="form-check-input" type="checkbox" value=""></td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Alparg. Simil/41 Azul</td>
-                            <td>3.100</td>
-                            <td>3.100</td>
-                            <td><input class="form-check-input" type="checkbox" value=""></td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Bomb.Gaucho Lisa/42 Verde</td>
-                            <td>8.500</td>
-                            <td>8.500</td>
-                            <td><input class="form-check-input" type="checkbox" value=""></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="row p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+                  <thead>
+                      <th>Cant</th>
+                      <th>Detalle</th>
+                      <th>Precio</th>
+                      <th>Total</th>
+                      <th>Eliminar</th>
+                  </thead>
+                  <tbody id="tbodycarrito">
+                      
+                  </tbody>
+              </table>
+                
+                <!-- <div class="row p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
                     <span class="col input-group-text">Total a Pagar</span>
                     <span class="col input-group-text">$</span>
-                    <span class="col input-group-text">33.400,00</span>
+                    <span class="col input-group-text"></span>
                     
-                </div>
+                </div> -->
                 <div class="d-grid gap-2 col-6 mx-auto my-3">
                     <button class="btn btn-primary" type="button">ACTUALIAR</button>
                     <button class="btn btn-primary" type="button">Borrar Carrito</button>
@@ -325,6 +299,7 @@
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
   </script>
+  <script src="/E-commers/js/carrito.js"></script>
   </body>
   
 </body>

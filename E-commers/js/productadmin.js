@@ -7,18 +7,19 @@ const St = document.getElementById("Stock");
 const Img = document.getElementById("Urlimg");
 const Registar = document.getElementById("AgregaProd");
 
-class Producto {
-  Id_Prod = "";
-  RubroArt="";
-  NombreArt = "";
-  Talle = "";
-  Descripcion = "";
-  Precio = "";
-  Stock = "";
-  Urlimg ="";
-}
+// class Producto {
+//   Id_Prod = "";
+//   RubroArt="";
+//   NombreArt = "";
+//   Talle = "";
+//   Descripcion = "";
+//   Precio = "";
+//   Stock = "";
+//   Urlimg ="";
+// }
 
-let registroProducto = new Producto();
+// let registroProducto = new Producto();
+let registroProducto=new Object()
 
   let Id_Prod = 1;
   let RubroArt="";

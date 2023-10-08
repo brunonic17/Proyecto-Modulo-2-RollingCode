@@ -33,7 +33,7 @@ console.log(arrayprduct);
             <h5 class="card-title">Precio: ${prod.Precio}</h5>
             <h5 class="card-title">Stock: ${prod.Stock}</h5>
             <p class="card-text">${prod.Descripcion}</p>
-            <a href="./alpargata-lisa.html" class="btn btn-primary">Ver Producto</a>
+            <a href="../pages/productodetalle.html" class="btn btn-primary" id="${prod.Id_Prod}">Ver Producto</a>
             </div>
         </div>`
     })
@@ -43,4 +43,27 @@ console.log(arrayprduct);
             tarjetas.innerHTML=htmltablatarjetas
         });
 
+        const ids = [];
         
+        for (let index = 0; index < arrayprduct.length; index++) {
+        const element = arrayprduct[index];
+        ids.push(element.Id_Prod);
+        }
+        console.log(ids);
+        
+        for (let index = 0; index < ids.length; index++) {
+            const id= ids[index];
+
+            let btn = document.getElementById(id);
+            
+                        
+            if (btn === null) continue;
+        
+            btn.addEventListener("click", (e) => {
+            let posicion = +e.target.id;
+            let prodposicion = arrayprduct.findIndex(registroProducto => registroProducto.Id_Prod === posicion);
+            console.log(prodposicion);
+            let productoacomprar= arrayprduct[prodposicion];
+            sessionStorage.setItem("detallepro",JSON.stringify(productoacomprar))           
+            });
+        }
