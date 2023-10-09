@@ -5,7 +5,7 @@ console.log(arrayproduct)
 let htmllistaart= ""
 
 arrayproduct.forEach(e => {
-    htmllistaart += `<li class="articulo filtro"><a href="/E-commers/pages/productodetalle.html" id="${e.Id_Prod}">${e.NombreArt.toLowerCase()}</a></li>`
+    htmllistaart += `<li class="articulo filtro"><a href="../pages/productodetalle.html" id="${e.Id_Prod}">${e.NombreArt.toLowerCase()}</a></li>`
 })
 
 const listaarticulo= document.getElementById("listaArticulos")
@@ -27,16 +27,16 @@ document.addEventListener("keyup", e=> {
     })  
 })
 
-const ids = [];
+const idss = [];
         
         for (let index = 0; index < arrayproduct.length; index++) {
         const element = arrayproduct[index];
-        ids.push(element.Id_Prod);
+        idss.push(element.Id_Prod);
         }
-        console.log(ids);
+        console.log(idss);
         
-        for (let index = 0; index < ids.length; index++) {
-            const id= ids[index];
+        for (let index = 0; index < idss.length; index++) {
+            const id= idss[index];
 
             let ancor = document.getElementById(id);
             
@@ -51,6 +51,3 @@ const ids = [];
             sessionStorage.setItem("detallepro",JSON.stringify(productoacomprar))           
             });
         }
-
-
-        

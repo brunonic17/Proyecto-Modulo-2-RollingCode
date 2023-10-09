@@ -1,4 +1,5 @@
 const tbodycarrito=document.getElementById("tbodycarrito");
+const tarjeta=document.getElementById("tarjeta");
 const spantotal= document.getElementById("spantotal");
 const spancant= document.getElementById("spancant");
 let arraycarrito= JSON.parse(localStorage.getItem("carrito"));
@@ -43,7 +44,6 @@ spancant.innerHTML= articulototal
  for (let index = 0; index < ids.length; index++) {
    const id= ids[index];
    let btn = document.getElementById(id)
-   console.log(btn);
 
    if (btn === null) continue;
 
@@ -63,3 +63,14 @@ spancant.innerHTML= articulototal
         alert("No se Borrara")
     }
   });}
+
+  tarjeta.addEventListener("click", (e) => {
+   
+    if (arraycarrito === null){
+        alert("Carrito vacio No Puede Pagar")
+    } else {
+        alert("Ya se puede pagar y vaciar el carrito")
+        console.log(arraycarrito);
+    }
+
+})

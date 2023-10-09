@@ -109,12 +109,17 @@
         class="col-12 col-md-7 col-lg-6 col-xl-6 col-xxl-7 d-flex order-md-2 justify-content-center align-items-center border-top border-topindex">
 
         <form
-          class="d-flex w-100 justify-content-center mt-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 justify-content-md-end justify-content-lg-center justify-content-xl-center"
-          role="search">
-          <input class="form-control form-controlindex input  border fst-italic" type="search" placeholder="Buscar" aria-label="Search" />
-          <button type="submit" class="bg-white d-flex gap-2  text-dark border fst-italic">
+          class="d-flex w-100 justify-content-center p-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 justify-content-md-end justify-content-lg-center justify-content-xl-center"
+          role="search" id="buscador">
+          <input class="form-control form-controlindex input  border fst-italic"
+            type="search" placeholder="Buscar"
+            aria-label="Search" />
+            <ul id="listaArticulos">
+              
+           </ul>
+          <button type="submit"
+            class="bg-white d-flex gap-2 buttonindex text-dark border fst-italic">
             <i class="bi bi-search fs-5"></i>
-            <p class="">Buscar</p>
           </button>
 
         </form>
@@ -327,4 +332,5 @@
 
   </script>
   <script src="/E-commers/js/login.js"></script>
+  <script src="../js/buscadorpages.js"></script>
 </body>
