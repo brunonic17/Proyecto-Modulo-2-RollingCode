@@ -159,15 +159,15 @@ let pp = arrayprduct.map(function(prod){
               <button type="button"  class="btn btn-danger" onclick="window.location.reload()" id="${prod.Id_Prod}">Eliminar</button>
 
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">MODIFICANDO</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form class="m-3">
-       <div class="row">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">MODIFICANDO</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form class="m-3">
+                  <div class="row">
                     <div class="mb-3 col-6">
                         <label for="Rubro" class="form-label">Rubro</label>
                         <h3 id="mRubro">${prod.RubroArt}</h3>
@@ -203,20 +203,20 @@ let pp = arrayprduct.map(function(prod){
                         <input type="number" class="form-control" id="mStock">
                     </div>
       
-  </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" onclick="window.location.reload()"   data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" onclick="window.location.reload()"  id="mAgregaProd" >Modificar</button>
-      </div>
-    </div>
-  </div>
-</div>     
+            </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" onclick="window.location.reload()"   data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary" onclick="window.location.reload()"  id="Guardar" >Guardar</button>
+                </div>
+              </div>
+            </div>
+          </div>     
               </td>
           </tr>`       
 })
 
-
+let _talle, _descripcion, _precio , _stock, _urlimg 
 const tbody=document.getElementById("tbody")
 
 tbody.innerHTML=htmltablaproducto
@@ -242,161 +242,72 @@ for (let index = 0; index < ids.length; index++) {
   console.log(btn);
   if (btn === null) continue;
 
-  btn.addEventListener("click", (e) => {
-    let elimina = +e.target.id;
-    console.log(elimina);
-    console.log(productos);
-    let prodeliminar = productos.findIndex(registroProducto => registroProducto.Id_Prod === elimina);
-    console.log(prodeliminar);
-    // productos.splice(prodeliminar,1);
-    console.log(productos);
-    alert("tecla")
-    // localStorage.setItem("productos", JSON.stringify(productos));
+    btn.addEventListener("click", (e) => {
+      let elimina = +e.target.id;
+      console.log(elimina);
+      console.log(productos);
+      let prodeliminar = productos.findIndex(registroProducto => registroProducto.Id_Prod === elimina);
+      console.log(prodeliminar);
+      // productos.splice(prodeliminar,1);
+      console.log(productos);
+      alert("tecla")
+      // localStorage.setItem("productos", JSON.stringify(productos));
 
-  });
+    });
 
   if (btn_m === null) continue;
 
-  btn_m.addEventListener("click", (e) => {
-    let modifica = e.target.id;
-    modifica = +modifica.slice(2)
+      btn_m.addEventListener("click", (e) => {
+        let modifica = e.target.id;
+        modifica = +modifica.slice(2)
 
-    console.log(modifica);
-    console.log(productos);
-       
-    let prodmodifica = productos.findIndex(registroProducto => registroProducto.Id_Prod === modifica);
-    let productoModificar = productos[prodmodifica]
-    console.log(productoModificar)
-    
-    console.log(prodmodifica);
+        console.log(modifica);
+        console.log(productos);
+          
+        let prodmodifica = productos.findIndex(registroProducto => registroProducto.Id_Prod === modifica);
+        let productoModificar = productos[prodmodifica]
+        console.log(productoModificar)
+        console.log(prodmodifica);
+        document.getElementById("modal-title").innerText = "Modificar: " + prodmodifica.NombreArt;
 
-const mRub = productoModificar.RubroArt;
-const mNomb =  productoModificar.NombreArt;
-const mTal = document.getElementById("mTalle");
-const mDesc = document.getElementById("mDescripcion");
-const mPcio = document.getElementById("mPrecio");
-const mSt = document.getElementById("mStock");
-const mImg = document.getElementById("mUrlimg");
-const mImg2 = document.getElementById("mUrlimg2");
-const mImg3 = document.getElementById("mUrlimg3");
-const mRegistar = document.getElementById("mAgregaProd");
+        Tal.value = prodmodifica.Talle;
+        Desc.value = prodmodifica.Descripcion;
+        Pcio.value = prodmodifica.Precio;
+        St.value = prodmodifica.Stock;
+        Img.value = prodmodifica.Urlimg;
 
+        _talle = prodmodifica.Talle;
+        _descripcion = prodmodifica.Descripcion;
+        _precio = prodmodifica.Precio;
+        _stock= prodmodifica.Stock;
+        _urlimg= prodmodifica.Urlimg;
 
-  let mRubroArt=mRub;
-  let mNombreArt = mNomb;
-  let mTalle = "";
-  let mDescripcion = "";
-  let mPrecio = "";
-  let mStock = "";
-  let mUrlimg ="";
-  let mUrlimg2 ="";
-  let mUrlimg3 ="";
-
-  // productoModificar.RubroArt = mRubroArt;
-  // productoModificar.NombreArt = mNombreArt;
-  // productoModificar.Talle = mTalle;
-  // productoModificar.Descripcion = mDescripcion;
-  // productoModificar.Precio = mPrecio;
-  // productoModificar.Stock = mStock;
-  // productoModificar.Urlimg = mUrlimg
- 
-//  mRub.addEventListener(
-//   "change",
-//   (e) => {
-//     mRubroArt = e.target.value;
-//   },
-//   false
-// );
-// mNomb.addEventListener(
-//   "change",
-//   (e) => {
-//     mNombreArt = e.target.value;
-//   },
-//   false
-// );
-mTal.addEventListener(
-  "change",
-  (e) => {
-    mTalle = e.target.value;
-  },
-  false
-);
-mDesc.addEventListener(
-  "change",
-  (e) => {
-    mDescripcion = e.target.value;
-  },
-  false
-);
-mPcio.addEventListener(
-  "change",
-  (e) => {
-    mPrecio = e.target.value;
-  },
-  false
-);
-mSt.addEventListener(
-  "change",
-  (e) => {
-    mStock = e.target.value;
-  },
-  false
-);
-mImg.addEventListener(
-  "change",
-  (e) => {
-    mUrlimg = e.target.value;
-  },
-  false
-);
-mImg2.addEventListener(
-  "change",
-  (e) => {
-    mUrlimg2 = e.target.value;
-  },
-  false
-);
-mImg3.addEventListener(
-  "change",
-  (e) => {
-    mUrlimg3 = e.target.value;
-  },
-  false
-);
-console.log(mRubroArt)
-//#region Registrar
-mRegistar.addEventListener("click", (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-
-  productoModificar.RubroArt = mRubroArt;
-  productoModificar.NombreArt = mNombreArt;
-  productoModificar.Talle = mTalle;
-  productoModificar.Descripcion = mDescripcion;
-  productoModificar.Precio = mPrecio;
-  productoModificar.Stock = mStock;
-  productoModificar.Urlimg = mUrlimg;
-  productoModificar.Urlimg2 = mUrlimg2;
-  productoModificar.Urlimg3 = mUrlimg3;
-
-  
-  console.log(productoModificar)
-  
-    // productos.push(productoModificar)
-   
-    
-      
-      localStorage.setItem("productos", JSON.stringify(productos));
-      console.log(productos)
+      });
     }
-   
-  
-  );
-   
 
 
-  });
-}
+    mTalle.addEventListener("change", (e) => {
+        _talle = e.target.value;
+      });
+
+    mDescripcion.addEventListener("change", (e) => {
+        _descripcion = e.target.value;
+    });
+
+    mPrecio.addEventListener("change", (e) => {
+      _precio = e.target.value;
+    });
+
+    mStock.addEventListener("change", (e) => {
+      _stock = e.target.value;
+    });
 
 
-
+    let btn_guardar = document.getElementById("Guardar");
+    
+    btn_guardar.addEventListener("click", () => {
+        let productoAModif = productos[prodeliminar];
+        productoAModif.Descripcion = _descripcion
+        localStorage.setItem("productos", JSON.stringify(productos));
+        console.log(productos)
+    })

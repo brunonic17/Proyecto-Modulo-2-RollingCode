@@ -6,6 +6,7 @@ let arraycarrito= JSON.parse(localStorage.getItem("carrito"));
 let htmltablacarrito=""
 let carritototal= 0
 let articulototal=0
+let Id_Vta = 1;
 
 arraycarrito.forEach(element => {
     carritototal+= element.importe
@@ -56,11 +57,13 @@ spancant.innerHTML= articulototal
     let conf = "N"
     conf = prompt("Confirma la Eliminacon del Producto en el Carrito S/N:")
     if (conf==="S"){
-    arraycarrito.splice(prodeliminar,1);
-    console.log(arraycarrito);
-    localStorage.setItem("carrito", JSON.stringify(arraycarrito));
+        arraycarrito.splice(prodeliminar,1);
+        console.log(arraycarrito);
+        localStorage.setItem("carrito", JSON.stringify(arraycarrito));
     } else {
         alert("No se Borrara")
+        let hh = DateTime.now()
+        console.log(hh)
     }
   });}
 
@@ -69,7 +72,19 @@ spancant.innerHTML= articulototal
     if (arraycarrito === null){
         alert("Carrito vacio No Puede Pagar")
     } else {
-        alert("Ya se puede pagar y vaciar el carrito")
+        let conf = "N"
+        conf = prompt("Confirma la Compra de los Producto del Carrito S/N:")
+        if (conf==="S"){
+            console.log(arraycarrito);
+            let ventas = JSON.parse(localStorage.getItem("ventas"));
+            if (ventas === null) {
+                localStorage.setItem("ventas", JSON.stringify(arraycarrito));
+                localStorage.removeItem("carrito");               
+            }
+            
+        } else {
+            alert("No se Borrara")
+        }
         console.log(arraycarrito);
     }
 
