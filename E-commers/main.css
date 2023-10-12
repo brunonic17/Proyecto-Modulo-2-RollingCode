@@ -510,17 +510,17 @@ footer i {
         min-height: 10vh;
     }
 
-    .menu-hamburguesa {
+    /* .menu-hamburguesa {
         display: none;
-    }
+    } */
 
     .nav-item-nosotros {
         display: block;
     }
 
-    .img-logo {
+    /* .img-logo {
         padding-left: 1rem !important;
-    }
+    } */
 
     .input {
         width: 80%;

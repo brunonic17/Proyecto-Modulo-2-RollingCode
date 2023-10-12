@@ -1,8 +1,8 @@
-// export default function registrarLogin (nomb, email, btn) {
+// export default function registrarLogin () {
 //     const d = document,
 //     w = window;
 
-// }
+// 
 
 const d = document;
 
@@ -10,12 +10,12 @@ const Mail = document.getElementById("inputEmail");
 // console.log(Mail)
 const Contrase_Mail = document.getElementById("inputContrase");
 const Login = document.getElementById("UsuarioLogin");
-const $iconoAcceder = d.getElementById("icono_acceder"),
-  $iconoContacto = d.getElementById("icono_contacto"),
-  $iconoNosotros = d.getElementById("icono_nosotros"),
-  $iconoAdmin = d.getElementById("icono_admin"),
-  $iconoCerrarSesion = d.getElementById("icono_cerrar_sesion"),
-  $iconoInicio = d.getElementById("icono_inicio");
+// const $iconoAcceder = d.getElementById("icono_acceder"),
+//   $iconoContacto = d.getElementById("icono_contacto"),
+//   $iconoNosotros = d.getElementById("icono_nosotros"),
+//   $iconoAdmin = d.getElementById("icono_admin"),
+//   $iconoCerrarSesion = d.getElementById("icono_cerrar_sesion"),
+//   $iconoInicio = d.getElementById("icono_inicio");
 // $a = d.querySelector(".aa")
 
 // console.log($a.dataset);
@@ -66,27 +66,65 @@ Contrase_Mail.addEventListener(
 
 let $carrito = document.getElementById("carrito");
 let carro = () => {
-  window.location.href = "../index.html"
-  localStorage.setItem("usuario", "habilitado")
-
-      
+  // window.location.href = "../index.html"
+  localStorage.setItem("usuario", "habilitado");
 }    
 
+let $nombreUsuario = document.getElementById("icono_acceder");
+
+// function expNomb (nombreDeUsuarioLogueado) {
+
+//     return $nombreUsuario.innerHTML = nombreDeUsuarioLogueado
+
+// }
 //#region Login
+
+let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
+  
+  //usuariosLocalStorage = Array Objetos
+  //Usuario = Cada Objeto dentro del Array
+  //usuarios = Clave del Local Storage
+  
+  //  export function getNombreUsuario () {
+    
+   let conf_email = usuariosLocalStorage.find(
+    (Usuario) => Usuario.Email === registroUsuario.Email
+  );
+
+  
+
 Login.addEventListener("click", (e) => {
   e.preventDefault();
   e.stopPropagation();
   registroUsuario.Email = Email;
   registroUsuario.Contrase = Contrase;
 
-  let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
+
+
+
+  // let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
+  
   //usuariosLocalStorage = Array Objetos
   //Usuario = Cada Objeto dentro del Array
   //usuarios = Clave del Local Storage
 
+  // function getNombreUsuario () {
+    
+  // let conf_email = usuariosLocalStorage.find(
+  //   (Usuario) => Usuario.Email === registroUsuario.Email
+  // );
+
+  // let expNombUser = conf_email.Nombre
+
+  // return expNombUser
+  // }
+  
+
   let conf_email = usuariosLocalStorage.find(
     (Usuario) => Usuario.Email === registroUsuario.Email
   );
+
+  let expNombUser = conf_email.Nombre
 
   if (conf_email === undefined) {
     alert("Usuario o Contraseña Incorrecta 1");
@@ -94,12 +132,12 @@ Login.addEventListener("click", (e) => {
     if (registroUsuario.Contrase === conf_email.Contrase) {
       if (conf_email.TipoUsuario == "user") {
         carro()
-        
-        // window.location.href = "../index.html"
-        // let $carrito = document.getElementById("carrito");
-        // $carrito.className.remove = "display_none";
-        // alert("Puede entrar como User, habilita Solo el CARRITO");
-        // console.log("Usuario: ",conf_email.Nombre," Tipo: ",conf_email.TipoUsuario);
+        // expNomb(conf_email.Nombre)
+  $nombreUsuario.innerHTML = `${conf_email.Nombre}`;
+  // getNombreUsuario()
+      
+       
+    
       } else {
         if (conf_email.TipoUsuario == "admin") {
           adminOpen();
@@ -118,7 +156,15 @@ Login.addEventListener("click", (e) => {
       alert("Usuario o Contraseña Incorrecta 2");
     }
   }
-  
+
 });
- 
+
+  
+
+  // if (localStorage.getItem("usuario") === null) {
+  //   $carrito.classList.add("display_none");
+  //   $cerrarSesionUsuario.classList.add("display_none")
+  // }
+
+// }
 //#endregion Login

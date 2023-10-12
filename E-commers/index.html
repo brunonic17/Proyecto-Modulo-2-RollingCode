@@ -34,10 +34,10 @@
     <!--#region nav-->
     <nav class=" bg-dark d-flex justify-content-center sticky-top container-nav">
       <div
-        class="row w-100 container container-sm container-md container-lg container-xl container-xxl align-items-center pe-1">
+        class="row w-100 container container-sm container-md container-lg container-xl container-xxl align-items-center justify-content-between pe-1">
         <!-- *******menu-hamburguesa****** -->
         <div
-          class="navbar navbar-expand-lg  col-2 col-sm-1 col-md-1  order-md-0 menu-hamburguesa p-0">
+          class="navbar  col-2 col-sm-1 col-md-1  order-md-0 menu-hamburguesa p-0">
 
           <button class="navbar-toggler w-100 border-0" type="button"
             data-bs-toggle="collapse"
@@ -52,7 +52,7 @@
         <!-- *******img-logo****** -->
 
         <div
-          class="col-3 col-sm-5 col-md-1  col-lg-3 col-xl-3 col-xxl-2  order-md-1 d-flex justify-content-start p-1 img-logo">
+          class="col-3 col-sm-5 col-md-1  col-lg-1  order-md-1 d-flex justify-content-start p-1 img-logo">
 
           <a class="text-white aindex" href="./index.html"><img
               class="img-shifu rounded-circle" src="./img/imglogo01.jpg"
@@ -66,16 +66,16 @@
 
           <ul
             class="navbar-nav gap-2 gap-sm-3 gap-md-3 gap-lg-3 gap-xl-4 gap-xxl-4 d-flex flex-row justify-content-end">
-            <li class="nav-item fs-4" id="icono_inicio">
+            <!-- <li class="nav-item fs-4" id="icono_inicio">
               <a class=" aindex nav-link active fw-bold text-white"
                 aria-current="page" href="./index.html"
                 data-bs-toggle="tooltip" data-bs-title="Inicio"
                 data-bs-placement="bottom"
                 data-bs-custom-class="custom-tooltip fst-italic"><i
                   class="bi bi-house-door"></i></a>
-            </li>
+            </li> -->
             <li class="nav-item fs-4" id="icono_acceder">
-              <a class="aindex nav-link text-white fw-bold" aria-current="page"
+              <a class="aindex nav-link text-white fw-bold " aria-current="page"
                 href="./pages/login.html"
                 data-bs-toggle="tooltip" data-bs-title="Acceder"
                 data-bs-placement="bottom"
@@ -157,21 +157,48 @@
               class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold nav-item_texto"
               href="./pages/accercadenosostros.html">Nosotros</i></a>
         </li>
-          <li class="nav-item nav-collapse-hover display_none" id="cerrar_sesion_usuario">
+          <li class="nav-item nav-collapse-hover display_none" id="cerrar_sesion_usuario"">
             <a
               class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold nav-item_texto"
-              href="#">Cerrar Secion</i></a>
+              href="#">Cerrar Sesion</i></a>
         </li>
+          <!-- <li class="nav-item nav-collapse-hover display_none" id="cerrar_sesion_usuario">
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold nav-item_texto"
+              href="#"><!-- Button trigger modal -->
+              <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+              </button></a> -->
+              
+              <!-- Modal -->
+              <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+        </li> 
       </ul>
     </div>
 
     <!-- *******imput-buscar****** -->
 
     <div
-      class="col-12 col-md-7 col-lg-6 col-xl-6 col-xxl-7 d-flex order-md-2 justify-content-center align-items-center border-top border-topindex">
+      class="col-12 col-md-7 col-lg-6 d-flex order-md-2 justify-content-center align-items-center border-top border-topindex">
 
       <form
-        class="d-flex w-100 justify-content-center p-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 justify-content-md-end justify-content-lg-center justify-content-xl-center"
+        class="d-flex w-100 justify-content-center p-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 justify-content-md-center justify-content-lg-center justify-content-xl-center"
         role="search">
         <input class="form-control form-controlindex input  border fst-italic"
           type="search" placeholder="Buscar"
@@ -188,7 +215,6 @@
 
   <!--#region main-->
   <!--  clase-->
-
   <main>
     <!--#region carousel-->
     <!-- <div class="container">
@@ -501,6 +527,7 @@
     <!-- #region script -->
     <script src="./index_js.js" type="module"></script>
     <script src="./assets/cerrar_sesion_usuario.js"></script>
+    <script src="./assets/login_registrar.js"></script>
  
     
     <script
