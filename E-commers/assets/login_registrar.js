@@ -66,8 +66,8 @@ Contrase_Mail.addEventListener(
 
 let $carrito = document.getElementById("carrito");
 let carro = () => {
-  // window.location.href = "../index.html"
-  localStorage.setItem("usuario", "habilitado");
+  window.location.href = "../index.html"
+  localStorage.setItem("iconos", "habilitado");
 }    
 
 let $nombreUsuario = document.getElementById("icono_acceder");
@@ -87,9 +87,11 @@ let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
   
   //  export function getNombreUsuario () {
     
-   let conf_email = usuariosLocalStorage.find(
-    (Usuario) => Usuario.Email === registroUsuario.Email
-  );
+  //  let conf_email = usuariosLocalStorage.find(
+  //   (Usuario) => Usuario.Email === registroUsuario.Email
+  // );
+
+  // localStorage.setItem("usuario", JSON.stringify(conf_email))
 
   
 
@@ -102,7 +104,7 @@ Login.addEventListener("click", (e) => {
 
 
 
-  // let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
+  let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
   
   //usuariosLocalStorage = Array Objetos
   //Usuario = Cada Objeto dentro del Array
@@ -124,7 +126,9 @@ Login.addEventListener("click", (e) => {
     (Usuario) => Usuario.Email === registroUsuario.Email
   );
 
-  let expNombUser = conf_email.Nombre
+  localStorage.setItem("usuario", JSON.stringify(conf_email.Nombre))
+
+  // let expNombUser = conf_email.Nombre
 
   if (conf_email === undefined) {
     alert("Usuario o Contraseña Incorrecta 1");

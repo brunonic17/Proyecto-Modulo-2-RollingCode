@@ -28,6 +28,7 @@ export default function themeDark(themeBtn, classMode) {
         lightMode();
         }
   }
+  
 });
 
   d.addEventListener("DOMContentLoaded", () => {

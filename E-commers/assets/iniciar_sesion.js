@@ -19,13 +19,15 @@ export default function iniciar_sesion () {
         // if (localStorage.getItem("carrito" === null)) {
         //   localStorage.setItem("carrito", "habilitado");
         // }
-        if (localStorage.getItem("usuario") === "habilitado") {
+        if (localStorage.getItem("iconos") === "habilitado") {
           $carrito.classList.remove("display_none");
-          $cerrarSesionUsuario.classList.remove("display_none")
-      
-      
+          $cerrarSesionUsuario.classList.remove("display_none");
+          let usuariosLocalStorage = JSON.parse(localStorage.getItem('usuario'));
+          $nombreUsuario.innerHTML = `${usuariosLocalStorage}`
         }
-        if (localStorage.getItem("usuario") === null) {
+        
+
+        if (localStorage.getItem("iconos") === null) {
           $carrito.classList.add("display_none");
           $cerrarSesionUsuario.classList.add("display_none")
         }
