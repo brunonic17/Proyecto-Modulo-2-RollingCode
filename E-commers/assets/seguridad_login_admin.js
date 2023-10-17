@@ -4,7 +4,6 @@ const Contrase_Mail = document.getElementById("inputContrase");
 const Contrase_Confir = document.getElementById("inputConfirContrase");
 const Registar = document.getElementById("UsuarioGuardar");
 
-
 // export default function seguridad (Nomb, Mail, Contrase_Mail, Contrase_Confir, Registar ){
 // let $Nomb = document.querySelector(Nomb)
 // console.log($Nomb)

@@ -19,6 +19,15 @@ const Login = document.getElementById("UsuarioLogin");
 // $a = d.querySelector(".aa")
 
 // console.log($a.dataset);
+let usulocal=localStorage.getItem("usuario")
+
+alert(usulocal);
+document.addEventListener("DOMContentLoaded",()=>{
+if(usulocal){
+  alert("Usted ya ingreso")
+  window.location.href="../index.html"
+}
+else{
 
 class Usuario {
   Id_Usu = "";
@@ -161,7 +170,7 @@ Login.addEventListener("click", (e) => {
     }
   }
 
-});
+});}})
 
   
 

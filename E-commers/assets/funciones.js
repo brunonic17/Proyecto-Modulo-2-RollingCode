@@ -3,6 +3,8 @@ const d = document,
   w = window,
   ls = localStorage;
 
+  let admlocal=localStorage.getItem("administrador")
+
 
   function scrollTopBtn (btn){
     let $scrollBtn = d.querySelector(btn)
@@ -40,7 +42,10 @@ $btnCerrarSesion.addEventListener('click', (e) => {
     window.location.href = "../index.html"
 })
     if (localStorage.getItem("administrador") === null) {
-    window.location.href = "../pages/error404.html"   
+    window.location.href = "../pages/error404.html"  
+    localStorage.removeItem("iconos");
+    localStorage.removeItem("usuario"); 
+    window.location.reload()
   }}}
 
 
@@ -56,7 +61,7 @@ $cerrarSesionUsuario.addEventListener('click', (e) => {
      window.location.reload()}
      
 )}
-else{ window.location.href = "../pages/error404.html"}}
+else if($cerrarSesionUsuario === null && admlocal === null) { window.location.href = "../pages/error404.html"}}
 
 function iniciar_sesion () {
     let $nombreUsuario = document.getElementById("icono_acceder")
