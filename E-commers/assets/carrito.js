@@ -2,7 +2,12 @@ const tbodycarrito=document.getElementById("tbodycarrito");
 const tarjeta=document.getElementById("tarjeta");
 const spantotal= document.getElementById("spantotal");
 const spancant= document.getElementById("spancant");
+const datosusuario=document.getElementById("datosusuario")
 let arraycarrito= JSON.parse(localStorage.getItem("carrito"));
+let usuariolocal=JSON.parse(localStorage.getItem("usuario"))
+
+
+if(arraycarrito){
 let htmltablacarrito=""
 let carritototal= 0
 let articulototal=0
@@ -88,4 +93,14 @@ spancant.innerHTML= articulototal
         console.log(arraycarrito);
     }
 
-})
+})}
+
+
+
+let htmlususario =`<h5 class="card-title">Usuario:</h5>
+<p class="card-text">${usuariolocal.Nombre}</p>`
+
+datosusuario.innerHTML=htmlususario
+
+
+ 

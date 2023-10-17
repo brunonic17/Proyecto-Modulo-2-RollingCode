@@ -36,6 +36,7 @@ if($btnCerrarSesion){
 $btnCerrarSesion.addEventListener('click', (e) => {
     localStorage.removeItem("administrador");
     localStorage.removeItem("usuario");
+    localStorage.removeItem("carrito")
     window.location.href = "../index.html"
 })
     if (localStorage.getItem("administrador") === null) {
@@ -52,8 +53,10 @@ $cerrarSesionUsuario.addEventListener('click', (e) => {
     localStorage.removeItem("iconos");
     localStorage.removeItem("usuario");
      alert("Muchas gracias por elegirnos, hasta pronto 👏")
-     window.location.reload()
-})}}
+     window.location.reload()}
+     
+)}
+else{ window.location.href = "../pages/error404.html"}}
 
 function iniciar_sesion () {
     let $nombreUsuario = document.getElementById("icono_acceder")
@@ -158,8 +161,8 @@ arrayproduct.forEach(e => {
 const listaarticulo= document.getElementById("listaArticulos")
 
 listaarticulo.innerHTML= htmllistaart
-
-document.addEventListener("keyup", e=> {
+let buscador = document.getElementById("buscador")
+buscador.addEventListener("keyup", e=> {
     
     document.querySelectorAll(".articulo").forEach(articulo =>{
         

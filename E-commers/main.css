@@ -293,7 +293,7 @@
 
 .carousel-item img {
 
-    object-fit: contain;
+    object-fit: fill;
 }
 
 
@@ -786,8 +786,8 @@ footer i {
 }
 
 #listaArticulos{
-    font-size: 30px;
-    margin-top: 20px;
+    font-size: 20px;
+    margin-top: 40px;
     list-style: none;
     font-weight: 600;
     background-color: #ffffff;
