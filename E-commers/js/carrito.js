@@ -3,10 +3,48 @@ const tarjeta=document.getElementById("tarjeta");
 const spantotal= document.getElementById("spantotal");
 const spancant= document.getElementById("spancant");
 let arraycarrito= JSON.parse(localStorage.getItem("carrito"));
+
+class Cabecera_Venta {
+    Id_Vta = 0;
+    Id_Usuario = "";
+    CantProduc = "";
+    TotalVenta ="";
+
+  }
+  
+  let registroCabecera_Venta = new Cabecera_Venta();
+    let Id_Vta = 0;
+    let Id_Usuario = "";
+    let CantProduc ="";
+    let TotalVenta = "";
+
+// class Venta {
+//     Id_Vta= "";
+//     Id_Prod = "";
+//     RubroArt="";
+//     NombreArt = "";
+//     Talle = "";
+//     Descripcion = "";
+//     Precio = "";
+//     cantidad ="";
+//   }
+  
+//   let registroVenta = new Venta();
+//     let Id_Vta="1";
+//     let Id_Prod = "";
+//     let RubroArt="";
+//     let NombreArt = "";
+//     let Talle = "";
+//     let Descripcion = "";
+//     let Precio = "";
+//     let cantidad = "";
+
+
 let htmltablacarrito=""
 let carritototal= 0
 let articulototal=0
-let Id_Vta = 1;
+
+
 
 arraycarrito.forEach(element => {
     carritototal+= element.importe
@@ -75,11 +113,33 @@ spancant.innerHTML= articulototal
         let conf = "N"
         conf = prompt("Confirma la Compra de los Producto del Carrito S/N:")
         if (conf==="S"){
+            // registroCabecera_Venta.Id_Vta = Id_Vta;
+            registroCabecera_Venta.TotalVenta= carritototal;
+            registroCabecera_Venta.CantProduc= articulototal;
             console.log(arraycarrito);
+            let cabeceraventas = JSON.parse(localStorage.getItem("cabeceraventas"));
             let ventas = JSON.parse(localStorage.getItem("ventas"));
+            let ult = arraycarrito[arraycarrito.length - 1];
+            console.log(ult);
+            let id = ult.Id_Vta;
+            console.log(id);
+            Id_Vta = id;
+            registroCabecera_Venta.Id_Vta = Id_Vta;
+            alert("Tecla");
             if (ventas === null) {
                 localStorage.setItem("ventas", JSON.stringify(arraycarrito));
-                localStorage.removeItem("carrito");               
+                localStorage.setItem("cabeceraventas", JSON.stringify(registroCabecera_Venta));
+                localStorage.removeItem("carrito");
+                console.log(ventas);            
+            } else {
+                // let ult = ventas[ventas.length - 1];
+                // let id = ult.Id_Vta;
+                // registroCabecera_Venta.Id_Vta = id;
+                cabeceraventas.push(registroCabecera_Venta);
+                localStorage.setItem("cabeceraventas", JSON.stringify(cabeceraventas));
+                ventas.push(arraycarrito);
+                localStorage.setItem("ventas", JSON.stringify(ventas));
+                localStorage.removeItem("carrito");
             }
             
         } else {
