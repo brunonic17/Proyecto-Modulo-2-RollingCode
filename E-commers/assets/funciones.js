@@ -2,6 +2,7 @@
 const d = document,
   w = window,
   ls = localStorage;
+ 
 
   let admlocal=localStorage.getItem("administrador")
 
@@ -40,12 +41,13 @@ $btnCerrarSesion.addEventListener('click', (e) => {
     localStorage.removeItem("usuario");
     localStorage.removeItem("carrito")
     window.location.href = "../index.html"
-})
-    if (localStorage.getItem("administrador") === null) {
-    window.location.href = "../pages/error404.html"  
     localStorage.removeItem("iconos");
+  })
+  if (localStorage.getItem("administrador") === null) {
+    window.location.href = "../pages/error404.html"  
     localStorage.removeItem("usuario"); 
-    window.location.reload()
+    localStorage.removeItem("iconos");
+    // window.location.reload()
   }}}
 
 
@@ -66,7 +68,9 @@ else if($cerrarSesionUsuario === null && admlocal === null) { window.location.hr
 function iniciar_sesion () {
     let $nombreUsuario = document.getElementById("icono_acceder")
       let $carrito = document.getElementById("carrito");
-      let $cerrarSesionUsuario = document.getElementById("cerrar_sesion_usuario")
+      let $cerrarSesionUsuario = document.getElementById("cerrar_sesion_usuario"),
+      $iconoContacto = d.getElementById("icono_contacto"),
+      $iconoNosotros = d.getElementById("icono_nosotros");
       
   
       // let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
@@ -83,9 +87,25 @@ function iniciar_sesion () {
           // }
           if (localStorage.getItem("iconos") === "habilitado") {
             $carrito.classList.remove("display_none");
-            $cerrarSesionUsuario.classList.remove("display_none");
+            // $cerrarSesionUsuario.classList.remove("display_none");
+            $iconoContacto.innerHTML = ` <li class="nav-item fs-4" id="icono_adminstrador">
+            <a class="aindex nav-link text-white fw-bold" aria-current="page"
+              href="/E-commers/pages/product-admin-panel.html"
+              data-bs-toggle="tooltip" data-bs-title="Admin"
+              data-bs-placement="bottom"
+              data-bs-custom-class="custom-tooltip fst-italic" href="#"><i class="bi bi-person-gear"></i></a>
+          </li>`;
+          $iconoNosotros.innerHTML =  ` <li class="nav-item fs-4" id="icono_finalizar_sesion">
+          <a class="aindex nav-link text-white fw-bold" aria-current="page"
+            href=""
+            data-bs-toggle="tooltip" data-bs-title="Cerrar Sesion"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip fst-italic" href="#"><i class="bi bi-person-fill-slash"></i></a>
+        </li> `
             let usuariosLocalStorage = JSON.parse(localStorage.getItem('usuario'));
             $nombreUsuario.innerHTML = `${usuariosLocalStorage.Nombre}`
+            console.log(usuariosLocalStorage.Nombre)
+            
           }
           
   

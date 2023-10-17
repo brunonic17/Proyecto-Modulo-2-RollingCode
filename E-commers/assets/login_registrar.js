@@ -11,8 +11,8 @@ const Mail = document.getElementById("inputEmail");
 const Contrase_Mail = document.getElementById("inputContrase");
 const Login = document.getElementById("UsuarioLogin");
 // const $iconoAcceder = d.getElementById("icono_acceder"),
-//   $iconoContacto = d.getElementById("icono_contacto"),
-//   $iconoNosotros = d.getElementById("icono_nosotros"),
+  //  $iconoContacto = d.getElementById("icono_contacto"),
+  //  $iconoNosotros = d.getElementById("icono_nosotros"),
 //   $iconoAdmin = d.getElementById("icono_admin"),
 //   $iconoCerrarSesion = d.getElementById("icono_cerrar_sesion"),
 //   $iconoInicio = d.getElementById("icono_inicio");
@@ -21,7 +21,7 @@ const Login = document.getElementById("UsuarioLogin");
 // console.log($a.dataset);
 let usulocal=localStorage.getItem("usuario")
 
-alert(usulocal);
+
 document.addEventListener("DOMContentLoaded",()=>{
 if(usulocal){
   alert("Usted ya ingreso")
