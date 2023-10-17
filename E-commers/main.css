@@ -9,11 +9,11 @@
     --color-cinco-verde: rgb(47, 255, 99);
     --bg-color-opacity: rgba(205, 224, 34, 0.26);
     --font-family: 'Roboto', sans-serif;
-
+    --theme-dark-color:#222;
     --dark: #16191c;
     --dark-x: #1e2126;
     --light: #ffffff;
-
+    
 }
 
 * {
@@ -23,7 +23,12 @@
 .bodyindex {
     background-color:rgb(236, 240, 241);
 }
-
+.display_none {
+    display: none;
+}
+.display_block {
+    display: block;
+}
 
 .container-bg-img {
     background-image: url(./img/353065597_710813511054060_9158423684060028871_n.jpg);
@@ -54,8 +59,8 @@
     border-bottom-right-radius: 0;
 
 }
-
 .navbar-toggler {
+
     padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
     font-size: var(--bs-navbar-toggler-font-size);
     line-height: 1;
@@ -162,8 +167,47 @@
     transition: all .3s ease-out;
 }
 
+/* ********MI ESTILOS EVENTOS***** */
 
-
+.scroll_top_btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    
+    
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--color-terciario-gris);
+    color: var(--color-quaternario-azul);
+    transition: all 0.3s ease-out;
+}
+.scroll_top_btn:hover {
+    cursor: pointer;
+    background-color: var(--color-quaternario-azul);
+    color: var(--color-terciario-gris);
+}
+.scroll_top_btn i {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+/* *****************DarkThemeButton***************** */
+.theme_dark {
+   
+    border: 0;
+    color: yellow;
+    border-radius: 50%;
+    background-color: var( --dark);
+}
+.dark_mode {
+   
+    background-color: var(--theme-dark-color)!important  ;
+}
 /* ********MI ESTILOS***** */
 
 .bg-color-opacity {
@@ -198,6 +242,14 @@
   min-height: 3rem;
 }
 
+
+.img-shifu1{
+    width: 4rem;
+    height: 4rem;
+    min-height: 3rem;
+  }
+
+
 .icon_nav {
   display: none;
 }
@@ -213,6 +265,9 @@
 .nav-item-nosotros {
     display: none;
 
+}
+.fs-4 {
+    font-size: calc(1.80rem + .3vw)!important;
 }
 .nav-collapse-hover:hover {
     background-color: #4b76b6;
@@ -299,6 +354,7 @@ footer i {
 
 .bg-dark {
     background-color: var(--dark) !important;
+    
 }
 
 .bg-dark-x,
@@ -401,7 +457,7 @@ footer i {
     }
 
     .nav-item {
-        font-size: calc(1rem + 0.9vw) !important;
+        font-size: calc(1.25rem + 0.9vw) !important;
 
     }
 
@@ -454,17 +510,17 @@ footer i {
         min-height: 10vh;
     }
 
-    .menu-hamburguesa {
+    /* .menu-hamburguesa {
         display: none;
-    }
+    } */
 
     .nav-item-nosotros {
         display: block;
     }
 
-    .img-logo {
+    /* .img-logo {
         padding-left: 1rem !important;
-    }
+    } */
 
     .input {
         width: 80%;
