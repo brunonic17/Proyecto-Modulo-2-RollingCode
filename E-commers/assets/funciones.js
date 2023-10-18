@@ -59,7 +59,6 @@ $btnCerrarSesion.addEventListener('click', (e) => {
   })
   if (localStorage.getItem("administrador") === null) {
     // window.location.href = "../pages/error404.html"  
-    localStorage.removeItem("usuario"); 
     localStorage.removeItem("iconos");
     // 
     // 
@@ -77,6 +76,7 @@ $btnCerrarSesion.addEventListener('click', (e) => {
 $cerrarSesionUsuario.addEventListener('click', (e) => {
     localStorage.removeItem("iconos");
     localStorage.removeItem("usuario");
+    localStorage.removeItem("user")
      alert("Muchas gracias por elegirnos, hasta pronto 👏")
     })}
     
@@ -104,7 +104,7 @@ function iniciar_sesion () {
           // if (localStorage.getItem("carrito" === null)) {
           //   localStorage.setItem("carrito", "habilitado");
           // }&& localStorage.getItem("administrador") === null
-          if (localStorage.getItem("iconos") === "habilitado"  && localStorage.getItem("administrador") === null ) {
+          if (( localStorage.getItem("user") === "habilitado" )) {
             $carrito.classList.remove("display_none");
             $cerrarSesionUsuario.classList.remove("display_none");
            

@@ -74,13 +74,14 @@ Contrase_Mail.addEventListener(
   // }
 };
 
-let $carrito = document.getElementById("carrito");
+// let $carrito = document.getElementById("carrito");
 let carro = () => {
   window.location.href = "../index.html"
-  localStorage.setItem("iconos", "habilitado");
+  
+  localStorage.setItem("user", "habilitado");
 }    
 
-let $nombreUsuario = document.getElementById("icono_acceder");
+// let $nombreUsuario = document.getElementById("icono_acceder");
 
 // function expNomb (nombreDeUsuarioLogueado) {
 
@@ -134,19 +135,22 @@ Login.addEventListener("click", (e) => {
   let conf_email = usuariosLocalStorage.find(
     (Usuario) => Usuario.Email === registroUsuario.Email
   );
-
-  localStorage.setItem("usuario", JSON.stringify(conf_email))
+  console.log(conf_email)
+  localStorage.setItem("usuario", JSON.stringify(conf_email));
+ 
 
   // let expNombUser = conf_email.Nombre
 
   if (conf_email === undefined) {
     alert("Usuario o Contraseña Incorrecta 1");
   } else {
+    
     if (registroUsuario.Contrase === conf_email.Contrase) {
       if (conf_email.TipoUsuario == "user") {
         carro()
+
         // expNomb(conf_email.Nombre)
-  $nombreUsuario.innerHTML = `${conf_email.Nombre}`;
+  
   // getNombreUsuario()
       
        
@@ -154,6 +158,7 @@ Login.addEventListener("click", (e) => {
       } else {
         if (conf_email.TipoUsuario == "admin") {
           adminOpen();
+
         }
         //   $iconoAcceder.classList.add("display_none");
         //   $iconoContacto.classList.add("display_none");
