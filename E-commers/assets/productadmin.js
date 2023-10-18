@@ -168,14 +168,7 @@ let pp = arrayprduct.map(function(prod){
                   <div class="modal-body">
                   <form class="m-3">
                   <div class="row">
-                    <div class="mb-3 col-6">
-                        <label for="Rubro" class="form-label">Rubro</label>
-                        <h3 id="mRubro">${prod.RubroArt}</h3>
-                    </div>
-                    <div class="mb-3 col-6">
-                        <label for="NombreArt" class="form-label">Nombre del Articulo</label>
-                        <h3 id="mNombreArt">${prod.NombreArt}</h3>
-                    </div>
+                    
                 </div>
                 <div class="row">
                     <div class="mb-3 col-9">
@@ -216,7 +209,7 @@ let pp = arrayprduct.map(function(prod){
           </tr>`       
 })
 
-let _talle, _descripcion, _precio , _stock, _urlimg 
+// let _talle, _descripcion, _precio , _stock, _urlimg 
 const tbody=document.getElementById("tbody")
 
 tbody.innerHTML=htmltablaproducto
@@ -248,10 +241,10 @@ for (let index = 0; index < ids.length; index++) {
       console.log(productos);
       let prodeliminar = productos.findIndex(registroProducto => registroProducto.Id_Prod === elimina);
       console.log(prodeliminar);
-      // productos.splice(prodeliminar,1);
+      productos.splice(prodeliminar,1);
       console.log(productos);
-      alert("tecla")
-      // localStorage.setItem("productos", JSON.stringify(productos));
+    
+      localStorage.setItem("productos", JSON.stringify(productos));
 
     });
 
@@ -268,46 +261,140 @@ for (let index = 0; index < ids.length; index++) {
         let productoModificar = productos[prodmodifica]
         console.log(productoModificar)
         console.log(prodmodifica);
-        document.getElementById("modal-title").innerText = "Modificar: " + prodmodifica.NombreArt;
+        // document.getElementById("modal-title").innerText = "Modificar: " + prodmodifica.NombreArt;
 
-        Tal.value = prodmodifica.Talle;
-        Desc.value = prodmodifica.Descripcion;
-        Pcio.value = prodmodifica.Precio;
-        St.value = prodmodifica.Stock;
-        Img.value = prodmodifica.Urlimg;
+  //       Tal.value = prodmodifica.Talle;
+  //       Desc.value = prodmodifica.Descripcion;
+  //       Pcio.value = prodmodifica.Precio;
+  //       St.value = prodmodifica.Stock;
+  //       Img.value = prodmodifica.Urlimg;
 
-        _talle = prodmodifica.Talle;
-        _descripcion = prodmodifica.Descripcion;
-        _precio = prodmodifica.Precio;
-        _stock= prodmodifica.Stock;
-        _urlimg= prodmodifica.Urlimg;
+  //       _talle = prodmodifica.Talle;
+  //       _descripcion = prodmodifica.Descripcion;
+  //       _precio = prodmodifica.Precio;
+  //       _stock= prodmodifica.Stock;
+  //       _urlimg= prodmodifica.Urlimg;
 
-      });
-    }
-
-
-    mTalle.addEventListener("change", (e) => {
-        _talle = e.target.value;
-      });
-
-    mDescripcion.addEventListener("change", (e) => {
-        _descripcion = e.target.value;
-    });
-
-    mPrecio.addEventListener("change", (e) => {
-      _precio = e.target.value;
-    });
-
-    mStock.addEventListener("change", (e) => {
-      _stock = e.target.value;
-    });
+  //     });
+  //   }
 
 
-    let btn_guardar = document.getElementById("Guardar");
+  //   mTalle.addEventListener("change", (e) => {
+  //       _talle = e.target.value;
+  //     });
+
+  //   mDescripcion.addEventListener("change", (e) => {
+  //       _descripcion = e.target.value;
+  //   });
+
+  //   mPrecio.addEventListener("change", (e) => {
+  //     _precio = e.target.value;
+  //   });
+
+  //   mStock.addEventListener("change", (e) => {
+  //     _stock = e.target.value;
+  //   });
+
+
+  //   let btn_guardar = document.getElementById("Guardar");
     
-    btn_guardar.addEventListener("click", () => {
-        let productoAModif = productos[prodeliminar];
-        productoAModif.Descripcion = _descripcion
+  //   btn_guardar.addEventListener("click", () => {
+  //       let productoAModif = productos[prodeliminar];
+  //       productoAModif.Descripcion = _descripcion
+  //       localStorage.setItem("productos", JSON.stringify(productos));
+  //       console.log(productos)
+  //   })
+  // const mRub = document.getElementById("mRubro");
+  // const mNomb = document.getElementById("mNombreArt");
+  const mTal = document.getElementById("mTalle");
+  const mDesc = document.getElementById("mDescripcion");
+  const mPcio = document.getElementById("mPrecio");
+  const mSt = document.getElementById("mStock");
+  const mImg = document.getElementById("mUrlimg");
+  const mRegistar = document.getElementById("Guardar");
+  
+  
+    // let mRubroArt="";
+    // let mNombreArt = "";
+    let mTalle = "";
+    let mDescripcion = "";
+    let mPrecio = "";
+    let mStock = "";
+    let mUrlimg ="";
+   
+  //  mRub.addEventListener(
+  //   "change",
+  //   (e) => {
+  //     mRubroArt = e.target.value;
+  //   },
+  //   false
+  // );
+  // mNomb.addEventListener(
+  //   "change",
+  //   (e) => {
+  //     mNombreArt = e.target.value;
+  //   },
+  //   false
+  // );
+  mTal.addEventListener(
+    "change",
+    (e) => {
+      mTalle = e.target.value;
+    },
+    false
+  );
+  mDesc.addEventListener(
+    "change",
+    (e) => {
+      mDescripcion = e.target.value;
+    },
+    false
+  );
+  mPcio.addEventListener(
+    "change",
+    (e) => {
+      mPrecio = e.target.value;
+    },
+    false
+  );
+  mSt.addEventListener(
+    "change",
+    (e) => {
+      mStock = e.target.value;
+    },
+    false
+  );
+  mImg.addEventListener(
+    "change",
+    (e) => {
+      mUrlimg = e.target.value;
+    },
+    false
+  );
+  
+  //#region Registrar
+  mRegistar.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  
+  
+   productoModificar.Talle = mTalle;
+   productoModificar.Descripcion = mDescripcion;
+   productoModificar.Precio = mPrecio;
+   productoModificar.Stock = mStock;
+   productoModificar.Urlimg = mUrlimg;
+  
+    
+      // let productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
+      //usuariosLocalStorage = Array Objetos
+      //Usuario = Cada Objeto dentro del Array
+      //usuarios = Clave del Local Storage
+  
+     
+       
         localStorage.setItem("productos", JSON.stringify(productos));
-        console.log(productos)
-    })
+     
+      }
+     
+    
+    )})};
