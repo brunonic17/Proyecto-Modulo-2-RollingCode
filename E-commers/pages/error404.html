@@ -23,6 +23,169 @@
     />
   </head>
   <body>
+    <nav class=" bg-dark d-flex justify-content-center sticky-top container-nav">
+      <div
+        class="row w-100 container container-sm container-md container-lg container-xl container-xxl align-items-center justify-content-between pe-1">
+        <!-- *******menu-hamburguesa****** -->
+        <div
+          class="navbar  col-2 col-sm-1 col-md-1  order-md-0 menu-hamburguesa p-0">
+
+          <button class="navbar-toggler w-100 border-0" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        </div>
+
+        <!-- *******img-logo****** -->
+
+        <div
+          class="col-3 col-sm-5 col-md-1  col-lg-1  order-md-1 d-flex justify-content-start p-1 img-logo">
+
+          <a class="text-white aindex" href="/E-commers/index.html"><img
+              class="img-shifu rounded-circle" src="/E-commers/img/imglogo01.jpg"
+              alt="logo"></a>
+        </div>
+
+        <!-- *******menu-iconos****** -->
+
+        <div
+          class="col-7 col-sm-6  col-md-3 col-lg-3 col-xl-3 col-xxl-3 order-md-3 d-flex justify-content-end pe-md-4">
+
+          <ul
+            class="navbar-nav gap-2 gap-sm-3 gap-md-3 gap-lg-3 gap-xl-4 gap-xxl-4 d-flex flex-row justify-content-end">
+            <!-- <li class="nav-item fs-4" id="icono_inicio">
+              <a class=" aindex nav-link active fw-bold text-white"
+                aria-current="page" href="./index.html"
+                data-bs-toggle="tooltip" data-bs-title="Inicio"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic"><i
+                  class="bi bi-house-door"></i></a>
+            </li> -->
+            <li class="nav-item fs-4 text-white" id="icono_acceder">
+              <a class="aindex nav-link text-white fw-bold " aria-current="page"
+                href="/E-commers/pages/login.html"
+                data-bs-toggle="tooltip" data-bs-title="Acceder"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#" id=""><i
+                  class="bi bi-person-circle"></i></a>
+            </li>
+            <li class="nav-item fs-4" id="icono_contacto">
+              <a class="aindex nav-link text-white fw-bold" aria-current="page"
+                href="/E-commers/pages/contacto.html"
+                data-bs-toggle="tooltip" data-bs-title="Contacto"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#"><i
+                  class="bi bi-telephone"></i></a>
+            </li>
+            <li class="nav-item fs-4 " id="icono_nosotros">
+              <a class="aindex nav-link text-white fw-bold" aria-current="page"
+                href="/E-commers/pages/accercadenosostros.html"
+                data-bs-toggle="tooltip" data-bs-title="Nosotros"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#"><i
+                  class="bi bi-people-fill"></i></a>
+            </li>
+           
+            <li class="nav-item fs-4 display_none" id="icono_adminstrador">
+              <a class="aindex nav-link text-white fw-bold" aria-current="page"
+                href="#"
+                data-bs-toggle="tooltip" data-bs-title="Admin"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#"><i class="bi bi-person-gear"></i></a>
+            </li>
+            <li class="nav-item fs-4 display_none" id="icono_finalizar_sesion">
+              <a class="aindex nav-link text-white fw-bold" aria-current="page"
+                href="#"
+                data-bs-toggle="tooltip" data-bs-title="Cerrar Sesion"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#"><i class="bi bi-person-fill-slash"></i></a>
+            </li>
+
+            <li class="nav-item fs-4 display_none" id="carrito">
+              <a class="aindex nav-link text-warning fw-bold"
+                href="/E-commers/pages/Carrito.html" aria-current="page"
+                data-bs-toggle="tooltip" data-bs-title="Ver carrito"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic"><i
+                  class="bi bi-cart2">
+                  <span
+                    class="position-absolute top-25 start-90 translate-middle badge rounded-pill bg-danger">
+                    0
+
+                  </span>
+                </i></a>
+
+            </li>
+            <button class=" fs-4 theme_dark"> 
+              <span>🌙</span>
+          </button>
+        </ul>
+
+      </div>
+
+      <!-- *********collapse******** -->
+
+      <div class="collapse navbar-collapse  order-md-4 x"
+        id="navbarSupportedContent">
+        <ul class="navbar-nav mb-md-0 text-white">
+
+          <li class="nav-collapse fs3 nav-collapse-hover">
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold"
+              href="/E-commers/pages/alpargatas.html">Alpargatas</a>
+          </li>
+          <li class="nav-item nav-collapse-hover">
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold"
+              href="/E-commers/pages/bombachas.html">Bombachas</a>
+          </li>
+          <li class="nav-item nav-collapse-hover">
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold"
+              href="/E-commers/pages/varios.html">Varios</a>
+          </li>
+          <li class="nav-item nav-collapse-hover">
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold nav-item_texto"
+              href="/E-commers/pages/accercadenosostros.html">Nosotros</i></a>
+        </li>
+          <li class="nav-item nav-collapse-hover display_none" id="cerrar_sesion_usuario">
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold nav-item_texto"
+              href="#">Cerrar Sesion</i></a>
+        </li>
+         
+        </li> 
+      </ul>
+    </div>
+
+    <!-- *******imput-buscar****** -->
+
+  
+    <div
+    class="col-12 col-md-7 col-lg-6 col-xl-6 col-xxl-7 d-flex order-md-2 justify-content-center align-items-center border-top border-topindex">
+
+    <form
+      class="d-flex w-100 justify-content-center p-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 justify-content-md-end justify-content-lg-center justify-content-xl-center"
+      role="search" id="buscador">
+      <input class="form-control form-controlindex input  border fst-italic "
+        type="search" placeholder="Buscar"
+        aria-label="Search" />
+        <ul id="listaArticulos">
+          
+       </ul>
+      <button type="submit"
+        class="bg-white d-flex gap-2 buttonindex text-dark border fst-italic">
+        <i class="bi bi-search fs-5"></i>
+      </button>
+
+    </form>
+  </div>
+  </nav>
     <section class="page_404">
         <div class="container">
             <div class="row text-center">
@@ -36,6 +199,87 @@
                 </div>
             </div>
         </div>
+        <Footer class="bg-dark text-white container-fluid p-2">
+          <section class="container    text-start text-md-start text-lg-start text-xl-center text-xxl-center">
+            <div class="row text-start text-md-start">
+        
+              <div class=" col-12 col-md-6 col-lg-4 col-xl-4  mt-3">
+        
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
+                <hr class="mb-4">
+                <p>
+                  En YoCampo, compartimos la pasión por la vida en el campo, la conexión con la naturaleza y la autenticidad que este estilo de vida representa. Somos una tienda en línea dedicada a brindar a nuestros clientes las mejores prendas de ropa y accesorios diseñados para la aventura, la comodidad y la elegancia rústica.
+                </p>
+              </div>
+        
+              <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4  mx-auto mt-3">
+                <h5 class="dis text-uppercase mb-4 font-weight-bold text-primary">Dejanos Ayudarte</h5>
+                <hr class="mb-4">
+                <p>
+                  <a href="./login.html" class="text-decoration-none">Tu Cuenta</a>
+                </p>
+                <p>
+                  <a href="./Carrito.html" class="text-decoration-none">Tus Pedidos</a>
+                </p>
+                <p>
+                  <a href="./error404.html" class="text-decoration-none">Ayuda</a>
+                </p>
+              </div>
+        
+              <div class="col-12 col-sm-6 col-md-12 col-lg-4 col-xl-4 mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Contacto</h5>
+                <hr class="mb-4">
+                <p>
+                  <i class="bi bi-buildings me-3"></i> Gral.Paz 1849 - Tucumán
+                </p>
+                <p>
+                  <i class="bi bi-envelope-at-fill me-3"></i><a class="text-decoration-none"
+                    href="https://outlook.live.com/owa/">yocampoo@hotmail.com
+                  </a>
+                </p>
+                <p>
+                  <i class="bi bi-telephone-inbound-fill me-3"></i><a class="text-decoration-none"
+                    href="tel:+54 381156811852">+54 381156811852</a>
+                </p>
+              </div>
+        
+              <hr class="mb-4">
+        
+              <div class="text-center mb-2">
+                <p>
+                  Copyright Todos los Derechos Reservados - Grupo Shifu
+                  <a href="#">
+                    <strong class="text-primary">Test</strong>
+                  </a>
+                </p>
+              </div>
+        
+              <div class="text-center">
+                <ul class="list-unstyled list-inline">
+        
+                  <li class="list-inline-item">
+                    <a href="#" class="fs-2"> <i class="bi bi-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="fs-2"> <i class="bi bi-instagram"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="fs-2"> <i class="bi bi-google"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="fs-2"> <i class="bi bi-youtube"></i></a>
+                  </li>
+        
+                </ul>
+              </div>
+        
+        
+        
+            </div>
+          </section>
+          <button class="scroll_top_btn hidden"><i class="bi bi-arrow-up"></i></button>
+        
+        </Footer>
     </section>
 
 

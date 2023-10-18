@@ -21,204 +21,168 @@
     <!--#region nav-->
     
     <nav class=" bg-dark d-flex justify-content-center sticky-top container-nav">
-        <div
-          class="row w-100 container container-sm container-md container-lg container-xl container-xxl align-items-center justify-content-between pe-1">
-          <!-- *******menu-hamburguesa****** -->
-          <div
-            class="navbar  col-2 col-sm-1 col-md-1  order-md-0 menu-hamburguesa p-0">
-  
-            <button class="navbar-toggler w-100 border-0" type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-  
-          </div>
-  
-          <!-- *******img-logo****** -->
-  
-          <div
-            class="col-3 col-sm-5 col-md-1  col-lg-1  order-md-1 d-flex justify-content-start p-1 img-logo">
-  
-            <a class="text-white aindex" href="../index.html"><img
-                class="img-shifu rounded-circle" src="../img/imglogo01.jpg"
-                alt="logo"></a>
-          </div>
-  
-          <!-- *******menu-iconos****** -->
-  
-          <div
-            class="col-7 col-sm-6  col-md-3 col-lg-3 col-xl-3 col-xxl-3 order-md-3 d-flex justify-content-end pe-md-4">
-  
-            <ul
-              class="navbar-nav gap-2 gap-sm-3 gap-md-3 gap-lg-3 gap-xl-4 gap-xxl-4 d-flex flex-row justify-content-end">
-              <!-- <li class="nav-item fs-4" id="icono_inicio">
-                <a class=" aindex nav-link active fw-bold text-white"
-                  aria-current="page" href="./index.html"
-                  data-bs-toggle="tooltip" data-bs-title="Inicio"
-                  data-bs-placement="bottom"
-                  data-bs-custom-class="custom-tooltip fst-italic"><i
-                    class="bi bi-house-door"></i></a>
-              </li> -->
-              <li class="nav-item fs-4 text-white" id="icono_acceder">
-                <a class="aindex nav-link text-white fw-bold " aria-current="page"
-                  href="./pages/login.html"
-                  data-bs-toggle="tooltip" data-bs-title="Acceder"
-                  data-bs-placement="bottom"
-                  data-bs-custom-class="custom-tooltip fst-italic" href="#" id=""><i
-                    class="bi bi-person-circle"></i></a>
-              </li>
-             
-              <!-- <li class="nav-item fs-4" id="icono_contacto">
-                <a class="aindex nav-link text-white fw-bold" aria-current="page"
-                  href="./pages/contacto.html"
-                  data-bs-toggle="tooltip" data-bs-title="Contacto"
-                  data-bs-placement="bottom"
-                  data-bs-custom-class="custom-tooltip fst-italic" href="#"><i
-                    class="bi bi-telephone"></i></a>
-              </li>
-              <li class="nav-item fs-4 nav-item-nosotros" id="icono_nosotros">
-                <a class="aindex nav-link text-white fw-bold" aria-current="page"
-                  href="./pages/accercadenosostros.html"
-                  data-bs-toggle="tooltip" data-bs-title="Nosotros"
-                  data-bs-placement="bottom"
-                  data-bs-custom-class="custom-tooltip fst-italic" href="#"><i
-                    class="bi bi-people-fill"></i></a>
-              </li> -->
-              <!-- <li class="nav-item fs-4 display_none" id="icono_admin">
-                <a class="aindex nav-link text-white fw-bold" aria-current="page" href="#" data-bs-toggle="tooltip"
-                  data-bs-title="Admin" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
-                  href="#" ><i class="bi bi-person-gear"></i></a>
-              </li>
-              <li class="nav-item fs-4  display_none" id="icono_cerrar_sesion">
-                <a class="aindex nav-link text-white fw-bold" aria-current="page" href="#" data-bs-toggle="tooltip"
-                  data-bs-title="Cerrar Sesion" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip fst-italic"
-                  href="#"><i class="bi bi-person-fill-slash"></i></a>
-              </li> -->
-              <li class="nav-item fs-4 display_none" id="carrito">
-                <a class="aindex nav-link text-warning fw-bold"
-                  href="./pages/Carrito.html" aria-current="page"
-                  data-bs-toggle="tooltip" data-bs-title="Ver carrito"
-                  data-bs-placement="bottom"
-                  data-bs-custom-class="custom-tooltip fst-italic"><i
-                    class="bi bi-cart2">
-                    <span
-                      class="position-absolute top-25 start-90 translate-middle badge rounded-pill bg-danger">
-                      0
-  
-                    </span>
-                  </i></a>
-  
-              </li>
-  
-              <li class="nav-item fs-4" id="icono_adminstrador">
-                <a class="aindex nav-link text-white fw-bold" aria-current="page"
-                  href="#"
-                  data-bs-toggle="tooltip" data-bs-title="Admin"
-                  data-bs-placement="bottom"
-                  data-bs-custom-class="custom-tooltip fst-italic" href="#"><i class="bi bi-person-gear"></i></a>
-              </li>
-              <li class="nav-item fs-4" id="icono_finalizar_sesion">
-                <a class="aindex nav-link text-white fw-bold" aria-current="page"
-                  href="#"
-                  data-bs-toggle="tooltip" data-bs-title="Cerrar Sesion"
-                  data-bs-placement="bottom"
-                  data-bs-custom-class="custom-tooltip fst-italic" href="#"><i class="bi bi-person-fill-slash"></i></a>
-              </li>
-             
-              <button class=" fs-4 theme_dark"> 
-                <span>🌙</span>
-            </button>
-          </ul>
-  
-        </div>
-  
-        <!-- *********collapse******** -->
-  
-        <div class="collapse navbar-collapse  order-md-4 x"
-          id="navbarSupportedContent">
-          <ul class="navbar-nav mb-md-0 text-white">
-  
-            <li class="nav-collapse fs3 nav-collapse-hover">
-              <a
-                class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold"
-                href="./pages/alpargatas.html">Alpargatas</a>
-            </li>
-            <li class="nav-item nav-collapse-hover">
-              <a
-                class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold"
-                href="./pages/bombachas.html">Bombachas</a>
-            </li>
-            <li class="nav-item nav-collapse-hover">
-              <a
-                class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold"
-                href="./pages/varios.html">Varios</a>
-            </li>
-            <li class="nav-item nav-collapse-hover">
-              <a
-                class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold nav-item_texto"
-                href="./pages/accercadenosostros.html">Nosotros</i></a>
-          </li>
-            <li class="nav-item nav-collapse-hover display_none" id="cerrar_sesion_usuario">
-              <a
-                class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold nav-item_texto"
-                href="#">Cerrar Sesion</i></a>
-          </li>
-            <!-- <li class="nav-item nav-collapse-hover display_none" id="cerrar_sesion_usuario">
-              <a
-                class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold nav-item_texto"
-                href="#"><!-- Button trigger modal -->
-                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  Launch demo modal
-                </button></a> -->
-                
-                <!-- Modal -->
-                <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-          </li> 
-        </ul>
-      </div>
-  
-      <!-- *******imput-buscar****** -->
-  
-    
       <div
-      class="col-12 col-md-7 col-lg-6 col-xl-6 col-xxl-7 d-flex order-md-2 justify-content-center align-items-center border-top border-topindex">
-  
-      <form
-        class="d-flex w-100 justify-content-center p-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 justify-content-md-end justify-content-lg-center justify-content-xl-center"
-        role="search" id="buscador">
-        <input class="form-control form-controlindex input  border fst-italic "
-          type="search" placeholder="Buscar"
-          aria-label="Search" />
-          <ul id="listaArticulos">
-            
-         </ul>
-        <button type="submit"
-          class="bg-white d-flex gap-2 buttonindex text-dark border fst-italic">
-          <i class="bi bi-search fs-5"></i>
-        </button>
-  
-      </form>
+        class="row w-100 container container-sm container-md container-lg container-xl container-xxl align-items-center justify-content-between pe-1">
+        <!-- *******menu-hamburguesa****** -->
+        <div
+          class="navbar  col-2 col-sm-1 col-md-1  order-md-0 menu-hamburguesa p-0">
+
+          <button class="navbar-toggler w-100 border-0" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        </div>
+
+        <!-- *******img-logo****** -->
+
+        <div
+          class="col-3 col-sm-5 col-md-1  col-lg-1  order-md-1 d-flex justify-content-start p-1 img-logo">
+
+          <a class="text-white aindex" href="/E-commers/index.html"><img
+              class="img-shifu rounded-circle" src="/E-commers/img/imglogo01.jpg"
+              alt="logo"></a>
+        </div>
+
+        <!-- *******menu-iconos****** -->
+
+        <div
+          class="col-7 col-sm-6  col-md-3 col-lg-3 col-xl-3 col-xxl-3 order-md-3 d-flex justify-content-end pe-md-4">
+
+          <ul
+            class="navbar-nav gap-2 gap-sm-3 gap-md-3 gap-lg-3 gap-xl-4 gap-xxl-4 d-flex flex-row justify-content-end">
+            <!-- <li class="nav-item fs-4" id="icono_inicio">
+              <a class=" aindex nav-link active fw-bold text-white"
+                aria-current="page" href="./index.html"
+                data-bs-toggle="tooltip" data-bs-title="Inicio"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic"><i
+                  class="bi bi-house-door"></i></a>
+            </li> -->
+            <li class="nav-item fs-4 text-white" id="icono_acceder">
+              <a class="aindex nav-link text-white fw-bold " aria-current="page"
+                href="/E-commers/pages/login.html"
+                data-bs-toggle="tooltip" data-bs-title="Acceder"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#" id=""><i
+                  class="bi bi-person-circle"></i></a>
+            </li>
+            <li class="nav-item fs-4" id="icono_contacto">
+              <a class="aindex nav-link text-white fw-bold" aria-current="page"
+                href="/E-commers/pages/contacto.html"
+                data-bs-toggle="tooltip" data-bs-title="Contacto"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#"><i
+                  class="bi bi-telephone"></i></a>
+            </li>
+            <li class="nav-item fs-4 " id="icono_nosotros">
+              <a class="aindex nav-link text-white fw-bold" aria-current="page"
+                href="/E-commers/pages/accercadenosostros.html"
+                data-bs-toggle="tooltip" data-bs-title="Nosotros"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#"><i
+                  class="bi bi-people-fill"></i></a>
+            </li>
+           
+            <li class="nav-item fs-4 display_none" id="icono_adminstrador">
+              <a class="aindex nav-link text-white fw-bold" aria-current="page"
+                href="#"
+                data-bs-toggle="tooltip" data-bs-title="Admin"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#"><i class="bi bi-person-gear"></i></a>
+            </li>
+            <li class="nav-item fs-4 display_none" id="icono_finalizar_sesion">
+              <a class="aindex nav-link text-white fw-bold" aria-current="page"
+                href="#"
+                data-bs-toggle="tooltip" data-bs-title="Cerrar Sesion"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic" href="#"><i class="bi bi-person-fill-slash"></i></a>
+            </li>
+
+            <li class="nav-item fs-4 display_none" id="carrito">
+              <a class="aindex nav-link text-warning fw-bold"
+                href="/E-commers/pages/Carrito.html" aria-current="page"
+                data-bs-toggle="tooltip" data-bs-title="Ver carrito"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-tooltip fst-italic"><i
+                  class="bi bi-cart2">
+                  <span
+                    class="position-absolute top-25 start-90 translate-middle badge rounded-pill bg-danger">
+                    0
+
+                  </span>
+                </i></a>
+
+            </li>
+            <button class=" fs-4 theme_dark"> 
+              <span>🌙</span>
+          </button>
+        </ul>
+
+      </div>
+
+      <!-- *********collapse******** -->
+
+      <div class="collapse navbar-collapse  order-md-4 x"
+        id="navbarSupportedContent">
+        <ul class="navbar-nav mb-md-0 text-white">
+
+          <li class="nav-collapse fs3 nav-collapse-hover">
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold"
+              href="/E-commers/pages/alpargatas.html">Alpargatas</a>
+          </li>
+          <li class="nav-item nav-collapse-hover">
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold"
+              href="/E-commers/pages/bombachas.html">Bombachas</a>
+          </li>
+          <li class="nav-item nav-collapse-hover">
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold"
+              href="/E-commers/pages/varios.html">Varios</a>
+          </li>
+          <li class="nav-item nav-collapse-hover">
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold nav-item_texto"
+              href="/E-commers/pages/accercadenosostros.html">Nosotros</i></a>
+        </li>
+          <li class="nav-item nav-collapse-hover display_none" id="cerrar_sesion_usuario">
+            <a
+              class="aindex nav-collapse text-decoration-none fs-4 text-white fw-bold nav-item_texto"
+              href="#">Cerrar Sesion</i></a>
+        </li>
+         
+        </li> 
+      </ul>
     </div>
-    </nav>
+
+    <!-- *******imput-buscar****** -->
+
+  
+    <div
+    class="col-12 col-md-7 col-lg-6 col-xl-6 col-xxl-7 d-flex order-md-2 justify-content-center align-items-center border-top border-topindex">
+
+    <form
+      class="d-flex w-100 justify-content-center p-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 justify-content-md-end justify-content-lg-center justify-content-xl-center"
+      role="search" id="buscador">
+      <input class="form-control form-controlindex input  border fst-italic "
+        type="search" placeholder="Buscar"
+        aria-label="Search" />
+        <ul id="listaArticulos">
+          
+       </ul>
+      <button type="submit"
+        class="bg-white d-flex gap-2 buttonindex text-dark border fst-italic">
+        <i class="bi bi-search fs-5"></i>
+      </button>
+
+    </form>
+  </div>
+  </nav>
     <!--endregion nav-->
 
     <section class="">
