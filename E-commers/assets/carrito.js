@@ -104,7 +104,7 @@ spancant.innerHTML= articulototal
         console.log(arraycarrito);
         localStorage.setItem("carrito", JSON.stringify(arraycarrito));
     } else {
-        alert("No se Borrara")
+        alert("No elimina el Producto")
         let hh = DateTime.now()
         console.log(hh)
     }
@@ -133,7 +133,7 @@ tarjeta.addEventListener("click", (e) => {
             console.log(id);
             Id_Vta = id;
             registroCabecera_Venta.Id_Vta = Id_Vta;
-            alert("Tecla");
+            alert("Compra Confirmada, en breve le llegara un mail con la factura y el nro. de envio");
             if (ventas === null) {
                 localStorage.setItem("ventas", JSON.stringify(arraycarrito));
                 localStorage.setItem("cabeceraventas", JSON.stringify([registroCabecera_Venta]));
@@ -145,11 +145,11 @@ tarjeta.addEventListener("click", (e) => {
                 ventas.push(arraycarrito);
                 localStorage.setItem("ventas", JSON.stringify(ventas));
                 localStorage.removeItem("carrito");
-                window.location.reload()
             }
+            window.location.reload()
             
         } else {
-            alert("No se Borrara")
+            alert("No Pgará Todavia")
         }
         console.log(arraycarrito);
     }
@@ -189,11 +189,10 @@ transfiere.addEventListener("click", (e) => {
                 ventas.push(arraycarrito);
                 localStorage.setItem("ventas", JSON.stringify(ventas));
                 localStorage.removeItem("carrito");
-                window.location.reload()
             }
-            
+            window.location.reload()  
         } else {
-            alert("No se Borrara")
+            alert("No Pgará Todavia")
         }
         console.log(arraycarrito);
     }

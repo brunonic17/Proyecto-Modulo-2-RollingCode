@@ -89,47 +89,55 @@ let btn_agregar = document.getElementById("btn_agregar");
 btn_agregar.addEventListener("click", (e) =>{
     e.preventDefault();
     e.stopPropagation();
-    if (cantidad > "0") {
-        
-        prodsession.cantidad=cantidad;
-        let precio=prodsession.Precio;
-        prodsession.importe= precio*cantidad;
-        console.log(prodsession.cantidad);
-        console.log(prodsession.importe);
-        console.log(prodsession);
-        let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
-        let cabeceraVentas = JSON.parse(localStorage.getItem("cabeceraventas"));
-        if (carritoLocalStorage === null) {
-          if (cabeceraVentas === null) {
-            prodsession.Id_Vta=Id_Vta;
+    let usu= JSON.parse(localStorage.getItem("usuario"));
+    console.log(usu);
+    if (usu === null || usu.TipoUsuario === "admin") {
+      alert("Debe iniciar Sesión como Usuario de Compra")
+    } else {
+      if (cantidad > "0") {
+          prodsession.cantidad=cantidad;
+          let precio=prodsession.Precio;
+          prodsession.importe= precio*cantidad;
+          console.log(prodsession.cantidad);
+          console.log(prodsession.importe);
+          console.log(prodsession);
+          let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
+          let cabeceraVentas = JSON.parse(localStorage.getItem("cabeceraventas"));
+          prodsession.Urlimg="";
+          prodsession.Urlimg2="";
+          prodsession.Urlimg3="";
+          if (carritoLocalStorage === null) {
+            if (cabeceraVentas === null) {
+              prodsession.Id_Vta=Id_Vta;
+            } else {
+              console.log(cabeceraVentas);
+              console.log(cabeceraVentas.length);
+              let ult = cabeceraVentas[cabeceraVentas.length - 1];
+              console.log(ult);
+              let id = ult.Id_Vta + 1;
+              console.log(id);
+              Id_Vta = id;
+              prodsession.Id_Vta = Id_Vta;
+            }
+            localStorage.setItem("carrito", JSON.stringify([prodsession]))
           } else {
-            console.log(cabeceraVentas);
-            console.log(cabeceraVentas.length);
-            let ult = cabeceraVentas[cabeceraVentas.length - 1];
+            let ult = carritoLocalStorage[carritoLocalStorage.length - 1];
             console.log(ult);
-            let id = ult.Id_Vta + 1;
+            let id = ult.Id_Vta;
             console.log(id);
             Id_Vta = id;
             prodsession.Id_Vta = Id_Vta;
+            // let ult = carritoLocalStorage[carritoLocalStorage.length - 1];
+            // let id = ult.Id_Vta;
+            // prodsession.Id_Vta = id;
+            carritoLocalStorage.push(prodsession);
+            localStorage.setItem("carrito", JSON.stringify(carritoLocalStorage))
           }
-          localStorage.setItem("carrito", JSON.stringify([prodsession]))
-        } else {
-          let ult = carritoLocalStorage[carritoLocalStorage.length - 1];
-          console.log(ult);
-          let id = ult.Id_Vta;
-          console.log(id);
-          Id_Vta = id;
-          prodsession.Id_Vta = Id_Vta;
-          // let ult = carritoLocalStorage[carritoLocalStorage.length - 1];
-          // let id = ult.Id_Vta;
-          // prodsession.Id_Vta = id;
-          carritoLocalStorage.push(prodsession);
-          localStorage.setItem("carrito", JSON.stringify(carritoLocalStorage))
+          alert("Producto agregado con Exito en el Carrito");
+          window.location.reload()
 
-        }
-
-
-    } else {
-        alert("Debe elegir la cantidad a Comprar");
+      } else {
+          alert("Debe elegir la cantidad a Comprar");
+      }
     }
 })

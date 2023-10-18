@@ -62,7 +62,7 @@ console.log(arrayprduct);
             btn.addEventListener("click", (e) => {
             let posicion = +e.target.id;
             let prodposicion = arrayprduct.findIndex(registroProducto => registroProducto.Id_Prod === posicion);
-            console.log(prodposicion);
+            // console.log(prodposicion);
             let productoacomprar= arrayprduct[prodposicion];
             sessionStorage.setItem("detallepro",JSON.stringify(productoacomprar))           
             });
