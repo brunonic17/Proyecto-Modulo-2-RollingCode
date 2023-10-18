@@ -262,10 +262,6 @@
   display: none;
 }
 
-.nav-item-nosotros {
-    display: none;
-
-}
 .fs-4 {
     font-size: calc(1.80rem + .3vw)!important;
 }

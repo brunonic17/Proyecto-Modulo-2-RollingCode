@@ -32,26 +32,38 @@ const d = document,
     )}
 
 function cerrarSesionAdmin(){
-let $btnCerrarSesion = document.getElementById("icono_finalizar_sesion")
+let $btnCerrarSesion = document.getElementById("icono_finalizar_sesion");
+
+let $cerrarpo2 = document.getElementById("cerrar_sesion_usuario")
 
   
 
 if($btnCerrarSesion){
-
-$btnCerrarSesion.addEventListener('click', (e) => {
-  alert("no borro")
+  $cerrarpo2.addEventListener('click', (e) => {
     localStorage.removeItem("administrador");
     localStorage.removeItem("usuario");
     localStorage.removeItem("carrito")
-    window.location.href = "../index.html"
+    window.location.href = "/E-commers/index.html"
     localStorage.removeItem("iconos");
+    // window.location.reload()
+   
   })
-  // if (localStorage.getItem("administrador") === null) {
-  //   window.location.href = "../pages/error404.html"  
-  //   localStorage.removeItem("usuario"); 
-  //   localStorage.removeItem("iconos");
-  //   // window.location.reload()
-  // }
+$btnCerrarSesion.addEventListener('click', (e) => {
+    localStorage.removeItem("administrador");
+    localStorage.removeItem("usuario");
+    localStorage.removeItem("carrito")
+    window.location.href = "/E-commers/index.html"
+    localStorage.removeItem("iconos");
+    // window.location.reload()
+   
+  })
+  if (localStorage.getItem("administrador") === null) {
+    // window.location.href = "../pages/error404.html"  
+    localStorage.removeItem("usuario"); 
+    localStorage.removeItem("iconos");
+    // 
+    // 
+  }
 }
 // else if(admlocal === null && localStorage.getItem("iconos") === null) { window.location.href = "../pages/error404.html"}
 }
@@ -73,11 +85,11 @@ $cerrarSesionUsuario.addEventListener('click', (e) => {
 function iniciar_sesion () {
     let $nombreUsuario = document.getElementById("icono_acceder")
       let $carrito = document.getElementById("carrito");
-      let $cerrarSesionUsuario = document.getElementById("cerrar_sesion_usuario"),
-      $iconoContacto = d.getElementById("icono_contacto"),
-      $iconoNosotros = d.getElementById("icono_nosotros"),
-      $iconoAdmin = d.getElementById("icono_adminstrador"),
-      $iconoCerrarSesionAdmin = d.getElementById("icono_finalizar_sesion")
+      let $cerrarSesionUsuario = document.getElementById("cerrar_sesion_usuario");
+       let $iconoContacto = d.getElementById("icono_contacto");
+      let $iconoNosotros = d.getElementById("icono_nosotros");
+       let $iconoAdmin = d.getElementById("icono_adminstrador");
+      let  $iconoCerrarSesionAdmin = d.getElementById("icono_finalizar_sesion")
       
   
       // let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
@@ -91,8 +103,8 @@ function iniciar_sesion () {
        
           // if (localStorage.getItem("carrito" === null)) {
           //   localStorage.setItem("carrito", "habilitado");
-          // }
-          if (localStorage.getItem("iconos") === "habilitado" &&localStorage.getItem("administrador") === null) {
+          // }&& localStorage.getItem("administrador") === null
+          if (localStorage.getItem("iconos") === "habilitado"  && localStorage.getItem("administrador") === null ) {
             $carrito.classList.remove("display_none");
             $cerrarSesionUsuario.classList.remove("display_none");
            
@@ -104,6 +116,8 @@ function iniciar_sesion () {
           else if(localStorage.getItem("administrador") === "habilitado" && localStorage.getItem("iconos") === "habilitado" ){
             $iconoAdmin.classList.remove("display_none");
             $iconoCerrarSesionAdmin.classList.remove("display_none");
+            $iconoContacto.classList.add("display_none")
+            $iconoNosotros.classList.add("display_none")
             let usuariosLocalStorage = JSON.parse(localStorage.getItem('usuario'));
             $nombreUsuario.innerHTML = `${usuariosLocalStorage.Nombre}`
             console.log(usuariosLocalStorage.Nombre)
