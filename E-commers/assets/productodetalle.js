@@ -79,33 +79,57 @@ htmpro +=`<div class="row pt-3">
 </div>`
 
 creadorprod.innerHTML=htmpro;
-
+let Id_Vta = 1;
 const cant=document.getElementById("cantidad");
 let cantidad="";
 cant.addEventListener("change", (e)=> cantidad=e.target.value,false );
 
 let btn_agregar = document.getElementById("btn_agregar");
  
-let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
-
 btn_agregar.addEventListener("click", (e) =>{
     e.preventDefault();
     e.stopPropagation();
     if (cantidad > "0") {
-        prodsession.cantidad=cantidad
-        let precio=prodsession.Precio
-        prodsession.importe= precio*cantidad
+        
+        prodsession.cantidad=cantidad;
+        let precio=prodsession.Precio;
+        prodsession.importe= precio*cantidad;
         console.log(prodsession.cantidad);
         console.log(prodsession.importe);
         console.log(prodsession);
+        let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
+        let cabeceraVentas = JSON.parse(localStorage.getItem("cabeceraventas"));
         if (carritoLocalStorage === null) {
-          
-            localStorage.setItem("carrito", JSON.stringify([prodsession]))
+          if (cabeceraVentas === null) {
+            prodsession.Id_Vta=Id_Vta;
+          } else {
+            console.log(cabeceraVentas);
+            console.log(cabeceraVentas.length);
+            let ult = cabeceraVentas[cabeceraVentas.length - 1];
+            console.log(ult);
+            let id = ult.Id_Vta + 1;
+            console.log(id);
+            Id_Vta = id;
+            prodsession.Id_Vta = Id_Vta;
+          }
+          localStorage.setItem("carrito", JSON.stringify([prodsession]))
         } else {
-            carritoLocalStorage.push(prodsession);
-            localStorage.setItem("carrito", JSON.stringify(carritoLocalStorage))
+          let ult = carritoLocalStorage[carritoLocalStorage.length - 1];
+          console.log(ult);
+          let id = ult.Id_Vta;
+          console.log(id);
+          Id_Vta = id;
+          prodsession.Id_Vta = Id_Vta;
+          // let ult = carritoLocalStorage[carritoLocalStorage.length - 1];
+          // let id = ult.Id_Vta;
+          // prodsession.Id_Vta = id;
+          carritoLocalStorage.push(prodsession);
+          localStorage.setItem("carrito", JSON.stringify(carritoLocalStorage))
+
         }
-  } else {
+
+
+    } else {
         alert("Debe elegir la cantidad a Comprar");
-  }
+    }
 })
