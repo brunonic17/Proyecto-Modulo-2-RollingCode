@@ -42,6 +42,7 @@
 
 
 /* ********RESETEAR ESTILOS***** */
+
 .tooltip {
     --bs-tooltip-font-size: 1rem;
     --bs-tooltip-color: #e9d8d8;
@@ -75,12 +76,16 @@
     --bs-gutter-y: 0;
     width: 100%;
 
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
     margin-right: auto;
     margin-left: auto;
 }
-
+.containerindex {
+    margin-top: 2rem;
+    box-shadow: 10px 10px 10px gray;
+    pad
+}
 .offcanvas {
 
     --bs-offcanvas-width: 200px;
@@ -163,7 +168,8 @@
 
 .aindex {
     
-
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     transition: all .3s ease-out;
 }
 
@@ -291,9 +297,12 @@
     border-bottom-right-radius: .375rem;
 }
 
-.carousel-item img {
+.carousel-item img  {
 
-    object-fit: fill;
+    object-fit: cover;
+}
+.objfit {
+    object-fit: contain !important;
 }
 
 
@@ -357,11 +366,11 @@ footer i {
     
 }
 
-.bg-dark-x,
+/* .bg-dark-x,
 .btn {
     background-color: var(--dark-x);
 
-}
+} */
 
 .volverinicio {
   color: #fff;
@@ -788,10 +797,10 @@ footer i {
 #listaArticulos{
     font-size: 20px;
     margin-top: 40px;
-    list-style: none;
+    text-decoration: none;
     font-weight: 600;
     background-color: #ffffff;
-    text-align: center;
+    text-align:left;
     position: fixed;
     width: 30%;
 }

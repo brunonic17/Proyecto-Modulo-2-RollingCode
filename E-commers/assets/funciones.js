@@ -45,12 +45,13 @@ $btnCerrarSesion.addEventListener('click', (e) => {
     localStorage.removeItem("carrito")
     window.location.href = "../index.html"
     localStorage.removeItem("iconos");
+    // window.location.reload()
   })
   // if (localStorage.getItem("administrador") === null) {
   //   window.location.href = "../pages/error404.html"  
   //   localStorage.removeItem("usuario"); 
   //   localStorage.removeItem("iconos");
-  //   // window.location.reload()
+  // // window.location.reload()
   // }
 }
 // else if(admlocal === null && localStorage.getItem("iconos") === null) { window.location.href = "../pages/error404.html"}
