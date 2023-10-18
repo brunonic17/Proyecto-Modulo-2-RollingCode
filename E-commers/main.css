@@ -734,7 +734,7 @@ footer i {
 .color-registro {
     background-color: var(--dark) !important;
 }
-.labelregistro, .btnregistro {
+ .btnregistro {
     background-color: var(--dark-x);
 }
 

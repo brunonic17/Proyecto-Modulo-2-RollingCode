@@ -1,5 +1,5 @@
 import{cerrarSesionAdmin,
-    cerrar_sesion_usuario,
+   
     iniciar_sesion,
     themeDark,
     buscador,
@@ -19,8 +19,8 @@ d.addEventListener("DOMContentLoaded", e =>{ //traigo la function y les pasos
     
 });
     // cerrarSesionAdmin()
-    iniciar_sesion();
     buscador();
     cerrarSesionAdmin();
-    cerrar_sesion_usuario();
+    // cerrar_sesion_usuario();
+    iniciar_sesion();
     themeDark(".theme_dark", "dark_mode")

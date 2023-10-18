@@ -4,7 +4,7 @@ const d = document,
   ls = localStorage;
  
 
-  let admlocal=localStorage.getItem("administrador")
+  
 
 
   function scrollTopBtn (btn){
@@ -34,43 +34,50 @@ const d = document,
 function cerrarSesionAdmin(){
 let $btnCerrarSesion = document.getElementById("icono_finalizar_sesion")
 
+  
+
 if($btnCerrarSesion){
 
 $btnCerrarSesion.addEventListener('click', (e) => {
+  alert("no borro")
     localStorage.removeItem("administrador");
     localStorage.removeItem("usuario");
     localStorage.removeItem("carrito")
     window.location.href = "../index.html"
     localStorage.removeItem("iconos");
   })
-  if (localStorage.getItem("administrador") === null) {
-    window.location.href = "../pages/error404.html"  
-    localStorage.removeItem("usuario"); 
-    localStorage.removeItem("iconos");
-    // window.location.reload()
-  }}}
+  // if (localStorage.getItem("administrador") === null) {
+  //   window.location.href = "../pages/error404.html"  
+  //   localStorage.removeItem("usuario"); 
+  //   localStorage.removeItem("iconos");
+  //   // window.location.reload()
+  // }
+}
+// else if(admlocal === null && localStorage.getItem("iconos") === null) { window.location.href = "../pages/error404.html"}
+}
 
 
   function cerrar_sesion_usuario(){
   let $cerrarSesionUsuario = document.getElementById("cerrar_sesion_usuario")
-
+  
   if($cerrarSesionUsuario){
 
 $cerrarSesionUsuario.addEventListener('click', (e) => {
     localStorage.removeItem("iconos");
     localStorage.removeItem("usuario");
      alert("Muchas gracias por elegirnos, hasta pronto 👏")
-     window.location.reload()}
-     
-)}
-else if($cerrarSesionUsuario === null && admlocal === null) { window.location.href = "../pages/error404.html"}}
+    })}
+    
+}
 
 function iniciar_sesion () {
     let $nombreUsuario = document.getElementById("icono_acceder")
       let $carrito = document.getElementById("carrito");
       let $cerrarSesionUsuario = document.getElementById("cerrar_sesion_usuario"),
       $iconoContacto = d.getElementById("icono_contacto"),
-      $iconoNosotros = d.getElementById("icono_nosotros");
+      $iconoNosotros = d.getElementById("icono_nosotros"),
+      $iconoAdmin = d.getElementById("icono_adminstrador"),
+      $iconoCerrarSesionAdmin = d.getElementById("icono_finalizar_sesion")
       
   
       // let usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
@@ -85,35 +92,31 @@ function iniciar_sesion () {
           // if (localStorage.getItem("carrito" === null)) {
           //   localStorage.setItem("carrito", "habilitado");
           // }
-          if (localStorage.getItem("iconos") === "habilitado") {
+          if (localStorage.getItem("iconos") === "habilitado" &&localStorage.getItem("administrador") === null) {
             $carrito.classList.remove("display_none");
-            // $cerrarSesionUsuario.classList.remove("display_none");
-            $iconoContacto.innerHTML = ` <li class="nav-item fs-4" id="icono_adminstrador">
-            <a class="aindex nav-link text-white fw-bold" aria-current="page"
-              href="/E-commers/pages/product-admin-panel.html"
-              data-bs-toggle="tooltip" data-bs-title="Admin"
-              data-bs-placement="bottom"
-              data-bs-custom-class="custom-tooltip fst-italic" href="#"><i class="bi bi-person-gear"></i></a>
-          </li>`;
-          $iconoNosotros.innerHTML =  ` <li class="nav-item fs-4" id="icono_finalizar_sesion">
-          <a class="aindex nav-link text-white fw-bold" aria-current="page"
-            href=""
-            data-bs-toggle="tooltip" data-bs-title="Cerrar Sesion"
-            data-bs-placement="bottom"
-            data-bs-custom-class="custom-tooltip fst-italic" href="#"><i class="bi bi-person-fill-slash"></i></a>
-        </li> `
+            $cerrarSesionUsuario.classList.remove("display_none");
+           
             let usuariosLocalStorage = JSON.parse(localStorage.getItem('usuario'));
             $nombreUsuario.innerHTML = `${usuariosLocalStorage.Nombre}`
             console.log(usuariosLocalStorage.Nombre)
             
           }
+          else if(localStorage.getItem("administrador") === "habilitado" && localStorage.getItem("iconos") === "habilitado" ){
+            $iconoAdmin.classList.remove("display_none");
+            $iconoCerrarSesionAdmin.classList.remove("display_none");
+            let usuariosLocalStorage = JSON.parse(localStorage.getItem('usuario'));
+            $nombreUsuario.innerHTML = `${usuariosLocalStorage.Nombre}`
+            console.log(usuariosLocalStorage.Nombre)
+          }
           
   
-          if (localStorage.getItem("iconos") === null) {
+          else {
+            
+           
             $carrito.classList.add("display_none");
             $cerrarSesionUsuario.classList.add("display_none")
-          }
-       });
+          
+       ;}
      
       // document.addEventListener("DOMContentLoaded", () => {
           
@@ -126,7 +129,7 @@ function iniciar_sesion () {
       //       $cerrarSesionUsuario.classList.add("display_none");
       //     }
       //   });
-      }
+      })};
 
       function themeDark(themeBtn, classMode) {
         const $themedark = d.querySelector(themeBtn),
